@@ -76,5 +76,13 @@ namespace QuanLyCoffee
             lkLoaiThucUong.Properties.ValueMember = "MaLoai";
             lkLoaiThucUong.Properties.DisplayMember = "TenLoai";
         }
+
+        private void btnDatLai_Click(object sender, EventArgs e)
+        {
+            txtMaThucUong.Text = "";
+            txtTenThucUong.Text = "";
+            txtGiaThucUong.Text = "";
+            txtDuongDan.Text = "";
+        }
     }
 }

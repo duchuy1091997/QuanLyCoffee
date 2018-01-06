@@ -13,7 +13,7 @@ using DataTransferObject;
 using System.IO;
 using DataAccessLayer;
 
-namespace QuanLyCoffee.QuanLyThucUong
+namespace QuanLyCoffee.QuanLyNguyenLieu
 {
     public partial class frmShowNguyenLieu : DevExpress.XtraEditors.XtraForm
     {
@@ -67,53 +67,44 @@ namespace QuanLyCoffee.QuanLyThucUong
 
         private void btnSua_Click(object sender, EventArgs e)
         {
-            frmSuaThucUong frmSua = new frmSuaThucUong();
-            //Đưa dữ liệu từ gridControl lên frmSuaThucUong
+            frmSuaNguyenLieu frmSua = new frmSuaNguyenLieu();
+            //Đưa dữ liệu từ gridControl lên frmSuaNguyenLieu
             int rowIndex = gvNguyenLieu.FocusedRowHandle;
             string colFieldName;
-            //Lấy cột MaThucUong gán vào txtMaThucUong
-            colFieldName = "MaThucUong";
+            //Lấy cột MaNguyenLieu gán vào txtMaNguyenLieu
+            colFieldName = "MaNguyenLieu";
             object value = gvNguyenLieu.GetRowCellValue(rowIndex,colFieldName);
-            string maThucUong = value.ToString().Trim();
-            frmSua.txtMaThucUong.Text = maThucUong;
-            //Lấy cột TenThucUong gán vào txtTenThucUong
-            colFieldName = "TenThucUong";
+            string maNguyenLieu = value.ToString().Trim();
+            frmSua.txtMaNguyenLieu.Text = maNguyenLieu;
+            //Lấy cột TenNguyenLieu gán vào txtTenNguyenLieu
+            colFieldName = "TenNguyenLieu";
             value = gvNguyenLieu.GetRowCellValue(rowIndex, colFieldName);
-            string tenThucUong = value.ToString();
-            frmSua.txtTenThucUong.Text = tenThucUong;
+            string tenNguyenLieu = value.ToString();
+            frmSua.txtTenNguyenLieu.Text = tenNguyenLieu;
+            //Lấy cột NhaSX gán vào txtNSX
+            colFieldName = "NhaSX";
+            value = gvNguyenLieu.GetRowCellValue(rowIndex, colFieldName);
+            string nhaSX = value.ToString();
+            frmSua.txtNSX.Text = nhaSX;
+            //Lấy cột SoLuongTon gán vào txtSLT
+            colFieldName = "SoLuongTon";
+            value = gvNguyenLieu.GetRowCellValue(rowIndex, colFieldName);
+            string slTon = value.ToString();
+            frmSua.txtSLTon.Text = slTon;
             //Lấy cột Gia gán vào txtGia
             colFieldName = "Gia";
             value = gvNguyenLieu.GetRowCellValue(rowIndex, colFieldName);
             string gia = value.ToString();
-            frmSua.txtGiaThucUong.Text = gia;
-            //Lấy cột AnhMinhHoa gan vao txtAnhMinhHoa
-            colFieldName = "AnhMinhHoa";
+            frmSua.txtGiaNguyenLieu.Text = gia;
+            //Lấy cột NgayNhap gán vào dtNgayNhap
+            colFieldName = "NgayNhap";
             value = gvNguyenLieu.GetRowCellValue(rowIndex, colFieldName);
-            string anhMinhHoa="";
-            try
-            {
-                anhMinhHoa = value.ToString();
-            }
-            catch
-            {
-                MessageBox.Show("Chưa có ảnh minh họa!","Thông Báo");
-            }
-            frmSua.txtDuongDan.Text = anhMinhHoa;
-            //Lấy đường dẫn gán vào ImgBox
-            string filePath = Path.GetFullPath("D:/15DTH14/CNPM/QuanLyCoffee/QuanLyCoffee/QuanLyCoffee/Images/" + frmSua.txtDuongDan.Text);
-            try
-            {
-                frmSua.pteHinhMinhHoa.Image = Image.FromFile(filePath);
-            }
-            catch
-            {
-
-                MessageBox.Show("Đường dẫn không đúng!","Lỗi!");
-            }
-            //Lấy LoaiThucUong gán vào cmbLoaiThucUong
-            colFieldName = "MaLoai";
+            DateTime ngayNhap =DateTime.Parse(value.ToString());
+            frmSua.dtNgayNhap.DateTime = ngayNhap;
+            //Lấy DonViTinh gán vào lkDVT
+            colFieldName = "DonViTinh";
             value = gvNguyenLieu.GetRowCellValue(rowIndex, colFieldName);
-            frmSua.lkLoaiThucUong.EditValue = value;
+            frmSua.lkDVT.EditValue = value;
             frmSua.ShowDialog();
         }
 

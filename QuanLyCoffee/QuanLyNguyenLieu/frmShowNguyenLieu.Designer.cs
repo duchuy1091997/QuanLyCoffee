@@ -1,4 +1,4 @@
-﻿namespace QuanLyCoffee.QuanLyThucUong
+﻿namespace QuanLyCoffee.QuanLyNguyenLieu
 {
     partial class frmShowNguyenLieu
     {

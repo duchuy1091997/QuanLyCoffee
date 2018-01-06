@@ -121,6 +121,7 @@
             this.btnDatLai.Size = new System.Drawing.Size(75, 23);
             this.btnDatLai.TabIndex = 8;
             this.btnDatLai.Text = "Đặt Lại";
+            this.btnDatLai.Click += new System.EventHandler(this.btnDatLai_Click);
             // 
             // btnThoat
             // 

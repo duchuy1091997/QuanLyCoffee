@@ -14,14 +14,14 @@ using DataAccessLayer;
 
 namespace QuanLyCoffee
 {
-    public partial class frmThemNguyenLieu : DevExpress.XtraEditors.XtraForm
+    public partial class frmSuaNguyenLieu : DevExpress.XtraEditors.XtraForm
     {
-        public frmThemNguyenLieu()
+        public frmSuaNguyenLieu()
         {
             InitializeComponent();
         }
 
-        private void frmThemNguyenLieu_Load(object sender, EventArgs e)
+        private void frmSuaNguyenLieu_Load(object sender, EventArgs e)
         {
             //Load đơn vị tính vào lkDVT
             lkDVT.Properties.DataSource = NguyenLieu_BUL.LoadNguyenLieu();
@@ -41,37 +41,16 @@ namespace QuanLyCoffee
         private void btnLuu_Click(object sender, EventArgs e)
         {
             NguyenLieu nl = new NguyenLieu();
-            try
-            {
-                nl.MaNguyenLieu = txtMaNguyenLieu.Text.Trim();
-            }
-            catch
-            {
-                MessageBox.Show("Trùng mã nguyên liệu!", "Lỗi!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
+            nl.MaNguyenLieu = txtMaNguyenLieu.Text;
             nl.TenNguyenLieu = txtTenNguyenLieu.Text;
             nl.NhaSX = txtNSX.Text;
-            nl.SoLuongTon =int.Parse(txtSLTon.Text);
-            try
-            {
-                nl.Gia = decimal.Parse(txtGiaNguyenLieu.Text);
-            }
-            catch
-            {
-
-                MessageBox.Show("Vui lòng nhập số!", "Lỗi!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-            try
-            {
-                nl.DonViTinh = lkDVT.EditValue.ToString();
-            }
-            catch
-            {
-                MessageBox.Show("Vui lòng chọn đơn vị tính!", "Lỗi!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
+            nl.Gia = decimal.Parse(txtGiaNguyenLieu.Text);
+            nl.SoLuongTon = int.Parse(txtSLTon.Text);
+            nl.DonViTinh = lkDVT.EditValue.ToString();
             nl.NgayNhap = dtNgayNhap.DateTime;
-            NguyenLieu_BUL.AddNguyenLieu(nl);
-            MessageBox.Show("Thêm Thành Công!", "Thông Báo");
+            //Lưu vào database
+            NguyenLieu_BUL.EditNguyenLieu(nl);
+            MessageBox.Show("Sửa thành công!", "Thông Báo");
             this.Close();
         }
     }

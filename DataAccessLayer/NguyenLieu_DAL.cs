@@ -21,6 +21,23 @@ namespace DataAccessLayer
             DbConnection.db.SaveChanges();
             return nl;
         }
+        //Sửa nguyên liệu
+        public static NguyenLieu EditNguyenLieu(NguyenLieu nl)
+        {
+            NguyenLieu nlUpdate = DbConnection.db.NguyenLieux.SingleOrDefault(n=>n.MaNguyenLieu==nl.MaNguyenLieu);
+            if (nlUpdate==null)
+            {
+                return null;
+            }
+            nlUpdate.TenNguyenLieu = nl.TenNguyenLieu;
+            nlUpdate.NhaSX = nl.NhaSX;
+            nlUpdate.SoLuongTon = nl.SoLuongTon;
+            nlUpdate.DonViTinh = nl.DonViTinh;
+            nlUpdate.Gia = nl.Gia;
+            nlUpdate.NgayNhap = nl.NgayNhap;
+            DbConnection.db.SaveChanges();
+            return nlUpdate;
+        }
         //Xóa nguyên liệu
         public static bool DeleteNguyenLieu(string maNguyenLieu)
         {

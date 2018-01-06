@@ -17,6 +17,10 @@ namespace BussinessLogicLayer
         {
             return NguyenLieu_DAL.AddNguyenLieu(nl);
         }
+        public static NguyenLieu EditNguyenLieu(NguyenLieu nl)
+        {
+            return NguyenLieu_DAL.EditNguyenLieu(nl);
+        }
         public static bool DeleteNguyenLieu(string maNguyenLieu)
         {
             return NguyenLieu_DAL.DeleteNguyenLieu(maNguyenLieu);
