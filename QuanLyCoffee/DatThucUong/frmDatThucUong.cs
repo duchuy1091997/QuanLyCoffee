@@ -16,6 +16,7 @@ namespace QuanLyCoffee.QuanLyThucUong
 {
     public partial class frmDatThucUong : DevExpress.XtraEditors.XtraForm
     {
+        DataTable dt = new DataTable();
         public frmDatThucUong()
         {
             InitializeComponent();
@@ -27,7 +28,6 @@ namespace QuanLyCoffee.QuanLyThucUong
                 e.Cancel = true;
             }
         }
-
         private void btnThoat_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -38,37 +38,60 @@ namespace QuanLyCoffee.QuanLyThucUong
             gvThucUong.Columns[0].Caption = "Mã Thức Uống";
             gvThucUong.Columns[1].Caption = "Tên Thức Uống";
             gvThucUong.Columns[2].Caption = "Giá";
-            gvThucUong.Columns[3].Caption = "Ảnh Minh Họa";
+            gvThucUong.Columns[3].Caption = "Hình minh họa";
             gvThucUong.Columns[4].Visible = false;
-            gvThucUong.Columns[5].Caption = "Loại Thức Uống";
+            gvThucUong.Columns[5].Caption = "Loại";
         }
         //Show thức uống lên grid control
         private void frmDatThucUong_Load(object sender, EventArgs e)
         {
-            //Gán dữ liệu cho gvThucUong
+            //Tạo datatable cho danh sách thức uống ở hóa đơn
+            dt.Columns.Add("Mã Thức uống");
+            dt.Columns.Add("Tên Thức uống");
+            dt.Columns.Add("Đơn Giá");
+            dt.Columns.Add("Số Lượng");
+            //Gán dữ liệu cho dgvThucUong
             gcThucUong.DataSource = typeof(ThucUong_DTO);
             gcThucUong.DataSource = ThucUong_BUL.LoadThucUong();
             //ẩn cột MaLoai
             ShowColumn();
         }
-
         private void btnChon_Click(object sender, EventArgs e)
         {
+            //Lấy dòng dc chọn
             int rowIndex = gvThucUong.FocusedRowHandle;
-            gcHoaDon.DataSource = typeof(ThucUong_DTO);
-            gcHoaDon.DataSource = gvThucUong.GetRow(rowIndex);
-            //gvHoaDon.GetRow(rowIndex);
+            string colFieldName;
+            //Lấy cột MaThucUong gán vào maThucUong
+            colFieldName = "MaThucUong";
+            object value = gvThucUong.GetRowCellValue(rowIndex, colFieldName);
+            string maThucUong = value.ToString().Trim();
+            //Lấy cột TenThucUong gán vào tenThucUong
+            colFieldName = "TenThucUong";
+            value = gvThucUong.GetRowCellValue(rowIndex, colFieldName);
+            string tenThucUong = value.ToString().Trim();
+            //Lấy cột Giá gán vào gia
+            colFieldName = "Gia";
+            value = gvThucUong.GetRowCellValue(rowIndex, colFieldName);
+            string gia = value.ToString().Trim();
+            //Lấy số lượng từ SpinEdit
+            string soLuong = seSoLuong.Value.ToString();
+            string[] col = { maThucUong,tenThucUong,gia,soLuong};
+            dt.Rows.Add(col);
+            gcDSChon.DataSource = dt;
         }
 
         private void btnDat_Click(object sender, EventArgs e)
         {
-            frmHoaDon frmHD = new frmHoaDon();
-            frmHD.ShowDialog();
-        }
-
-        private void gvThucUong_Click(object sender, EventArgs e)
-        {
-            
+            if (gcDSChon.DataSource==null)
+            {
+                MessageBox.Show("Chưa có thức uống được chọn!","Thông Báo!");
+            }
+            else
+            {
+                frmHoaDon frmHD = new frmHoaDon();
+                frmHD.gcHoaDon.DataSource = gcDSChon.DataSource;
+                frmHD.ShowDialog();
+            }
         }
 
         private void btnChiTiet_Click(object sender, EventArgs e)
@@ -105,7 +128,7 @@ namespace QuanLyCoffee.QuanLyThucUong
                 MessageBox.Show("Chưa có ảnh minh họa!", "Thông Báo");
             }
             //Lấy đường dẫn gán vào ImgBox
-            string filePath = "D:/15DTH14/CNPM/QuanLyCoffee/QuanLyCoffee/QuanLyCoffee/Images/"+anhMinhHoa;
+            string filePath = "D:/15DTH14/CNPM/QuanLyCoffee/QuanLyCoffee/QuanLyCoffee/Images/" + anhMinhHoa;
             try
             {
                 frmChiTiet.pteHinhMinhHoa.Image = Image.FromFile(filePath);
@@ -122,8 +145,22 @@ namespace QuanLyCoffee.QuanLyThucUong
             frmChiTiet.ShowDialog();
         }
 
-        private void gvThucUong_DoubleClick(object sender, EventArgs e)
+        private void gcThucUong_Click(object sender, EventArgs e)
         {
+            //Lấy dòng dc chọn
+            int rowIndex = gvThucUong.FocusedRowHandle;
+            string colFieldName;
+            //Lấy cột TenThucUong gán vào txtTenThucUong
+            colFieldName = "TenThucUong";
+            object value = gvThucUong.GetRowCellValue(rowIndex, colFieldName);
+            string tenThucUong = value.ToString().Trim();
+            txtTenThucUong.Text = tenThucUong;
+        }
+
+        private void btnXoa_Click(object sender, EventArgs e)
+        {
+            int rowIndex = gvThucUong.FocusedRowHandle;
+            MessageBox.Show(rowIndex.ToString());
         }
     }
 }

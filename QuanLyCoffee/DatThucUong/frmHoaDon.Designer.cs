@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmHoaDon));
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
@@ -40,30 +41,30 @@
             this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             this.btnHuy = new DevExpress.XtraEditors.SimpleButton();
             this.txtMaHD = new DevExpress.XtraEditors.TextEdit();
-            this.dateEdit1 = new DevExpress.XtraEditors.DateEdit();
+            this.dtNgayLap = new DevExpress.XtraEditors.DateEdit();
             this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
             this.lookUpEdit1 = new DevExpress.XtraEditors.LookUpEdit();
             this.txtTenThucUong = new DevExpress.XtraEditors.TextEdit();
-            this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
             this.labelControl8 = new DevExpress.XtraEditors.LabelControl();
             this.textEdit2 = new DevExpress.XtraEditors.TextEdit();
+            this.seSoLuong = new DevExpress.XtraEditors.SpinEdit();
             ((System.ComponentModel.ISupportInitialize)(this.gcHoaDon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvHoaDon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtThanhTien.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMaHD.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties.CalendarTimeProperties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtNgayLap.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtNgayLap.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lookUpEdit1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTenThucUong.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.seSoLuong.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // labelControl1
             // 
             this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl1.Appearance.Options.UseFont = true;
-            this.labelControl1.Location = new System.Drawing.Point(378, 12);
+            this.labelControl1.Location = new System.Drawing.Point(370, 12);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(87, 25);
             this.labelControl1.TabIndex = 0;
@@ -97,8 +98,11 @@
             // 
             // gvHoaDon
             // 
+            this.gvHoaDon.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFullFocus;
             this.gvHoaDon.GridControl = this.gcHoaDon;
             this.gvHoaDon.Name = "gvHoaDon";
+            this.gvHoaDon.OptionsBehavior.Editable = false;
+            this.gvHoaDon.OptionsBehavior.ReadOnly = true;
             // 
             // labelControl4
             // 
@@ -134,17 +138,19 @@
             // 
             // simpleButton1
             // 
+            this.simpleButton1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
             this.simpleButton1.Location = new System.Drawing.Point(175, 421);
             this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(75, 23);
+            this.simpleButton1.Size = new System.Drawing.Size(106, 23);
             this.simpleButton1.TabIndex = 3;
             this.simpleButton1.Text = "Xuất hóa đơn";
             // 
             // btnHuy
             // 
-            this.btnHuy.Location = new System.Drawing.Point(300, 421);
+            this.btnHuy.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnHuy.ImageOptions.Image")));
+            this.btnHuy.Location = new System.Drawing.Point(333, 421);
             this.btnHuy.Name = "btnHuy";
-            this.btnHuy.Size = new System.Drawing.Size(75, 23);
+            this.btnHuy.Size = new System.Drawing.Size(106, 23);
             this.btnHuy.TabIndex = 3;
             this.btnHuy.Text = "Hủy";
             // 
@@ -152,20 +158,22 @@
             // 
             this.txtMaHD.Location = new System.Drawing.Point(132, 48);
             this.txtMaHD.Name = "txtMaHD";
+            this.txtMaHD.Properties.ReadOnly = true;
             this.txtMaHD.Size = new System.Drawing.Size(159, 20);
             this.txtMaHD.TabIndex = 4;
             // 
-            // dateEdit1
+            // dtNgayLap
             // 
-            this.dateEdit1.EditValue = null;
-            this.dateEdit1.Location = new System.Drawing.Point(132, 93);
-            this.dateEdit1.Name = "dateEdit1";
-            this.dateEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.dtNgayLap.EditValue = null;
+            this.dtNgayLap.Location = new System.Drawing.Point(132, 93);
+            this.dtNgayLap.Name = "dtNgayLap";
+            this.dtNgayLap.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateEdit1.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.dtNgayLap.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateEdit1.Size = new System.Drawing.Size(159, 20);
-            this.dateEdit1.TabIndex = 5;
+            this.dtNgayLap.Properties.ReadOnly = true;
+            this.dtNgayLap.Size = new System.Drawing.Size(159, 20);
+            this.dtNgayLap.TabIndex = 5;
             // 
             // labelControl7
             // 
@@ -188,15 +196,9 @@
             // 
             this.txtTenThucUong.Location = new System.Drawing.Point(574, 98);
             this.txtTenThucUong.Name = "txtTenThucUong";
+            this.txtTenThucUong.Properties.ReadOnly = true;
             this.txtTenThucUong.Size = new System.Drawing.Size(159, 20);
             this.txtTenThucUong.TabIndex = 4;
-            // 
-            // textEdit1
-            // 
-            this.textEdit1.Location = new System.Drawing.Point(574, 137);
-            this.textEdit1.Name = "textEdit1";
-            this.textEdit1.Size = new System.Drawing.Size(57, 20);
-            this.textEdit1.TabIndex = 4;
             // 
             // labelControl8
             // 
@@ -213,14 +215,42 @@
             this.textEdit2.Size = new System.Drawing.Size(159, 20);
             this.textEdit2.TabIndex = 4;
             // 
+            // seSoLuong
+            // 
+            this.seSoLuong.EditValue = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.seSoLuong.Location = new System.Drawing.Point(574, 141);
+            this.seSoLuong.Name = "seSoLuong";
+            this.seSoLuong.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.seSoLuong.Properties.IsFloatValue = false;
+            this.seSoLuong.Properties.Mask.EditMask = "N00";
+            this.seSoLuong.Properties.MaxValue = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.seSoLuong.Properties.MinValue = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.seSoLuong.Properties.ReadOnly = true;
+            this.seSoLuong.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.seSoLuong.Size = new System.Drawing.Size(100, 20);
+            this.seSoLuong.TabIndex = 7;
+            // 
             // frmHoaDon
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(784, 461);
+            this.Controls.Add(this.seSoLuong);
             this.Controls.Add(this.lookUpEdit1);
-            this.Controls.Add(this.dateEdit1);
-            this.Controls.Add(this.textEdit1);
+            this.Controls.Add(this.dtNgayLap);
             this.Controls.Add(this.txtTenThucUong);
             this.Controls.Add(this.textEdit2);
             this.Controls.Add(this.txtMaHD);
@@ -238,16 +268,17 @@
             this.Controls.Add(this.labelControl1);
             this.Name = "frmHoaDon";
             this.Text = "Hóa đơn";
+            this.Load += new System.EventHandler(this.frmHoaDon_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gcHoaDon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvHoaDon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtThanhTien.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMaHD.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties.CalendarTimeProperties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtNgayLap.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtNgayLap.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lookUpEdit1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTenThucUong.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.seSoLuong.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -258,8 +289,8 @@
         private DevExpress.XtraEditors.LabelControl labelControl1;
         private DevExpress.XtraEditors.LabelControl labelControl2;
         private DevExpress.XtraEditors.LabelControl labelControl3;
-        private DevExpress.XtraGrid.GridControl gcHoaDon;
-        private DevExpress.XtraGrid.Views.Grid.GridView gvHoaDon;
+        public DevExpress.XtraGrid.GridControl gcHoaDon;
+        public DevExpress.XtraGrid.Views.Grid.GridView gvHoaDon;
         private DevExpress.XtraEditors.LabelControl labelControl4;
         private DevExpress.XtraEditors.LabelControl labelControl5;
         private DevExpress.XtraEditors.LabelControl labelControl6;
@@ -267,12 +298,12 @@
         private DevExpress.XtraEditors.SimpleButton simpleButton1;
         private DevExpress.XtraEditors.SimpleButton btnHuy;
         private DevExpress.XtraEditors.TextEdit txtMaHD;
-        private DevExpress.XtraEditors.DateEdit dateEdit1;
+        private DevExpress.XtraEditors.DateEdit dtNgayLap;
         private DevExpress.XtraEditors.LabelControl labelControl7;
         private DevExpress.XtraEditors.LookUpEdit lookUpEdit1;
         private DevExpress.XtraEditors.TextEdit txtTenThucUong;
-        private DevExpress.XtraEditors.TextEdit textEdit1;
         private DevExpress.XtraEditors.LabelControl labelControl8;
         private DevExpress.XtraEditors.TextEdit textEdit2;
+        private DevExpress.XtraEditors.SpinEdit seSoLuong;
     }
 }

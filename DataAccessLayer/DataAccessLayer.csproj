@@ -60,6 +60,7 @@
     <Compile Include="HoaDon.cs">
       <DependentUpon>QuanLyCoffeeEntities.tt</DependentUpon>
     </Compile>
+    <Compile Include="HoaDon_DAL.cs" />
     <Compile Include="KhachHang.cs">
       <DependentUpon>QuanLyCoffeeEntities.tt</DependentUpon>
     </Compile>
