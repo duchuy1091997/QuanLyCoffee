@@ -3,17 +3,16 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using DataAccessLayer;
 
-namespace DataAccessLayer
+namespace BussinessLogicLayer
 {
-    public class HoaDon_DAL
+    public class HoaDon_BUL
     {
-        //Thêm Hóa Đơn
+        //Thêm HD
         public static HoaDon AddHoaDon(HoaDon hd)
         {
-            hd = DbConnection.db.HoaDons.Add(hd);
-            DbConnection.db.SaveChanges();
-            return hd;
+            return HoaDon_DAL.AddHoaDon(hd);
         }
     }
 }

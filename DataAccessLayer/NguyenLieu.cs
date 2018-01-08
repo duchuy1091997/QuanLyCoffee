@@ -17,7 +17,7 @@ namespace DataAccessLayer
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public NguyenLieu()
         {
-            this.ThucUongs = new HashSet<ThucUong>();
+            this.ThucUong_NguyenLieu = new HashSet<ThucUong_NguyenLieu>();
         }
     
         public string MaNguyenLieu { get; set; }
@@ -29,6 +29,6 @@ namespace DataAccessLayer
         public Nullable<System.DateTime> NgayNhap { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<ThucUong> ThucUongs { get; set; }
+        public virtual ICollection<ThucUong_NguyenLieu> ThucUong_NguyenLieu { get; set; }
     }
 }

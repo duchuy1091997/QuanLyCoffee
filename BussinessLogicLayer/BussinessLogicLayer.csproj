@@ -40,6 +40,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CTHD_BUL.cs" />
+    <Compile Include="HoaDon_BUL.cs" />
     <Compile Include="LoaiThucUong_BUL.cs" />
     <Compile Include="NguyenLieu_BUL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

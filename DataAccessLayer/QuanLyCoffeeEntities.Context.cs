@@ -34,6 +34,7 @@ namespace DataAccessLayer
         public virtual DbSet<NhanVien> NhanViens { get; set; }
         public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
         public virtual DbSet<ThucUong> ThucUongs { get; set; }
+        public virtual DbSet<ThucUong_NguyenLieu> ThucUong_NguyenLieu { get; set; }
         public virtual DbSet<User> Users { get; set; }
     }
 }

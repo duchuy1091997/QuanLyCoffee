@@ -33,7 +33,6 @@
             this.btnChon = new DevExpress.XtraEditors.SimpleButton();
             this.btnDat = new DevExpress.XtraEditors.SimpleButton();
             this.btnXoa = new DevExpress.XtraEditors.SimpleButton();
-            this.btnXoaHet = new DevExpress.XtraEditors.SimpleButton();
             this.btnChiTiet = new DevExpress.XtraEditors.SimpleButton();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
@@ -75,7 +74,7 @@
             // btnDat
             // 
             this.btnDat.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnDat.ImageOptions.Image")));
-            this.btnDat.Location = new System.Drawing.Point(624, 282);
+            this.btnDat.Location = new System.Drawing.Point(685, 281);
             this.btnDat.Name = "btnDat";
             this.btnDat.Size = new System.Drawing.Size(112, 36);
             this.btnDat.TabIndex = 6;
@@ -85,21 +84,12 @@
             // btnXoa
             // 
             this.btnXoa.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnXoa.ImageOptions.Image")));
-            this.btnXoa.Location = new System.Drawing.Point(742, 282);
+            this.btnXoa.Location = new System.Drawing.Point(803, 281);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(112, 36);
             this.btnXoa.TabIndex = 6;
             this.btnXoa.Text = "Xóa";
             this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
-            // 
-            // btnXoaHet
-            // 
-            this.btnXoaHet.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnXoaHet.ImageOptions.Image")));
-            this.btnXoaHet.Location = new System.Drawing.Point(860, 282);
-            this.btnXoaHet.Name = "btnXoaHet";
-            this.btnXoaHet.Size = new System.Drawing.Size(112, 36);
-            this.btnXoaHet.TabIndex = 6;
-            this.btnXoaHet.Text = "Xóa hết";
             // 
             // btnChiTiet
             // 
@@ -219,7 +209,6 @@
             this.Controls.Add(this.labelControl1);
             this.Controls.Add(this.btnChiTiet);
             this.Controls.Add(this.btnChon);
-            this.Controls.Add(this.btnXoaHet);
             this.Controls.Add(this.btnXoa);
             this.Controls.Add(this.btnDat);
             this.Controls.Add(this.btnThoat);
@@ -243,7 +232,6 @@
         private DevExpress.XtraEditors.SimpleButton btnChon;
         private DevExpress.XtraEditors.SimpleButton btnDat;
         private DevExpress.XtraEditors.SimpleButton btnXoa;
-        private DevExpress.XtraEditors.SimpleButton btnXoaHet;
         private DevExpress.XtraEditors.SimpleButton btnChiTiet;
         private DevExpress.XtraEditors.LabelControl labelControl1;
         private DevExpress.XtraEditors.LabelControl labelControl2;

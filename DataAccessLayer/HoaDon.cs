@@ -22,9 +22,9 @@ namespace DataAccessLayer
     
         public string MaHD { get; set; }
         public Nullable<System.DateTime> NgayLap { get; set; }
+        public Nullable<decimal> TongTriGia { get; set; }
         public string MaKH { get; set; }
         public string MaNV { get; set; }
-        public Nullable<decimal> TongTriGia { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<CTHD> CTHDs { get; set; }

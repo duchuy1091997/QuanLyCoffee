@@ -38,7 +38,7 @@
             this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
             this.txtThanhTien = new DevExpress.XtraEditors.TextEdit();
-            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
+            this.btnXuatHD = new DevExpress.XtraEditors.SimpleButton();
             this.btnHuy = new DevExpress.XtraEditors.SimpleButton();
             this.txtMaHD = new DevExpress.XtraEditors.TextEdit();
             this.dtNgayLap = new DevExpress.XtraEditors.DateEdit();
@@ -136,14 +136,15 @@
             this.txtThanhTien.Size = new System.Drawing.Size(113, 20);
             this.txtThanhTien.TabIndex = 2;
             // 
-            // simpleButton1
+            // btnXuatHD
             // 
-            this.simpleButton1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
-            this.simpleButton1.Location = new System.Drawing.Point(175, 421);
-            this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(106, 23);
-            this.simpleButton1.TabIndex = 3;
-            this.simpleButton1.Text = "Xuất hóa đơn";
+            this.btnXuatHD.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
+            this.btnXuatHD.Location = new System.Drawing.Point(175, 421);
+            this.btnXuatHD.Name = "btnXuatHD";
+            this.btnXuatHD.Size = new System.Drawing.Size(106, 23);
+            this.btnXuatHD.TabIndex = 3;
+            this.btnXuatHD.Text = "Xuất hóa đơn";
+            this.btnXuatHD.Click += new System.EventHandler(this.btnXuatHD_Click);
             // 
             // btnHuy
             // 
@@ -255,7 +256,7 @@
             this.Controls.Add(this.textEdit2);
             this.Controls.Add(this.txtMaHD);
             this.Controls.Add(this.btnHuy);
-            this.Controls.Add(this.simpleButton1);
+            this.Controls.Add(this.btnXuatHD);
             this.Controls.Add(this.txtThanhTien);
             this.Controls.Add(this.gcHoaDon);
             this.Controls.Add(this.labelControl6);
@@ -295,7 +296,7 @@
         private DevExpress.XtraEditors.LabelControl labelControl5;
         private DevExpress.XtraEditors.LabelControl labelControl6;
         private DevExpress.XtraEditors.TextEdit txtThanhTien;
-        private DevExpress.XtraEditors.SimpleButton simpleButton1;
+        private DevExpress.XtraEditors.SimpleButton btnXuatHD;
         private DevExpress.XtraEditors.SimpleButton btnHuy;
         private DevExpress.XtraEditors.TextEdit txtMaHD;
         private DevExpress.XtraEditors.DateEdit dtNgayLap;
