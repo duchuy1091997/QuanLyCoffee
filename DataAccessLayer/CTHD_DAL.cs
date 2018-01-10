@@ -6,14 +6,14 @@ using System.Threading.Tasks;
 
 namespace DataAccessLayer
 {
-    public class HoaDon_DAL
+    public class CTHD_DAL
     {
-        //Thêm Hóa Đơn
-        public static HoaDon AddHoaDon(HoaDon hd)
+        //Thêm CTHD
+        public static CTHD AddCTHD(CTHD cthd)
         {
-            hd = DbConnection.db.HoaDons.Add(hd);
+            cthd = DbConnection.db.CTHDs.Add(cthd);
             DbConnection.db.SaveChanges();
-            return hd;
+            return cthd;
         }
     }
 }

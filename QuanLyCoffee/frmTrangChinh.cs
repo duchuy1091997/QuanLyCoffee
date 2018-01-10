@@ -8,6 +8,10 @@ using System.Text;
 using System.Windows.Forms;
 using QuanLyCoffee.QuanLyThucUong;
 using QuanLyCoffee.QuanLyNguyenLieu;
+using QuanLyCoffee.QuanLyNhanVien;
+using QuanLyCoffee.BaoCao;
+using QuanLyCoffee.QuanLyKhachHang;
+using QuanLyCoffee.TroGiup;
 
 namespace QuanLyCoffee
 {
@@ -72,6 +76,30 @@ namespace QuanLyCoffee
         {
             frmShowNguyenLieu frmNL = new frmShowNguyenLieu();
             ShowFormChild(frmNL);
+        }
+
+        private void btnQLNguoiDung_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            frmShowNhanVien frmNV = new frmShowNhanVien();
+            ShowFormChild(frmNV);
+        }
+
+        private void barButtonItem1_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            frmReportDoanhThu frmRP = new frmReportDoanhThu();
+            ShowFormChild(frmRP);
+        }
+
+        private void barButtonItem5_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            frmShowKhachHang frmKH = new frmShowKhachHang();
+            ShowFormChild(frmKH);
+        }
+
+        private void barButtonItem4_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            frmLienHe frmLH = new frmLienHe();
+            ShowFormChild(frmLH);
         }
     }
 }

@@ -18,7 +18,7 @@ namespace DataAccessLayer
         public ThucUong()
         {
             this.CTHDs = new HashSet<CTHD>();
-            this.NguyenLieux = new HashSet<NguyenLieu>();
+            this.ThucUong_NguyenLieu = new HashSet<ThucUong_NguyenLieu>();
         }
     
         public string MaThucUong { get; set; }
@@ -31,6 +31,6 @@ namespace DataAccessLayer
         public virtual ICollection<CTHD> CTHDs { get; set; }
         public virtual LoaiThucUong LoaiThucUong { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<NguyenLieu> NguyenLieux { get; set; }
+        public virtual ICollection<ThucUong_NguyenLieu> ThucUong_NguyenLieu { get; set; }
     }
 }

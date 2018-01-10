@@ -29,11 +29,13 @@ namespace DataAccessLayer
         public virtual DbSet<HoaDon> HoaDons { get; set; }
         public virtual DbSet<KhachHang> KhachHangs { get; set; }
         public virtual DbSet<LoaiKhachKhang> LoaiKhachKhangs { get; set; }
+        public virtual DbSet<LoaiNhanVien> LoaiNhanViens { get; set; }
         public virtual DbSet<LoaiThucUong> LoaiThucUongs { get; set; }
         public virtual DbSet<NguyenLieu> NguyenLieux { get; set; }
         public virtual DbSet<NhanVien> NhanViens { get; set; }
         public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
         public virtual DbSet<ThucUong> ThucUongs { get; set; }
+        public virtual DbSet<ThucUong_NguyenLieu> ThucUong_NguyenLieu { get; set; }
         public virtual DbSet<User> Users { get; set; }
     }
 }

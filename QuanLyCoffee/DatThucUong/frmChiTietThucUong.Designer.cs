@@ -35,7 +35,6 @@
             this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
-            this.btnChon = new DevExpress.XtraEditors.SimpleButton();
             this.btnThoat = new DevExpress.XtraEditors.SimpleButton();
             this.txtMaThucUong = new DevExpress.XtraEditors.TextEdit();
             this.txtTenThucUong = new DevExpress.XtraEditors.TextEdit();
@@ -99,19 +98,10 @@
             this.labelControl6.TabIndex = 0;
             this.labelControl6.Text = "Ảnh minh họa:";
             // 
-            // btnChon
-            // 
-            this.btnChon.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnChon.ImageOptions.Image")));
-            this.btnChon.Location = new System.Drawing.Point(125, 471);
-            this.btnChon.Name = "btnChon";
-            this.btnChon.Size = new System.Drawing.Size(75, 23);
-            this.btnChon.TabIndex = 8;
-            this.btnChon.Text = "Chọn";
-            // 
             // btnThoat
             // 
             this.btnThoat.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnThoat.ImageOptions.Image")));
-            this.btnThoat.Location = new System.Drawing.Point(298, 471);
+            this.btnThoat.Location = new System.Drawing.Point(211, 468);
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.Size = new System.Drawing.Size(75, 23);
             this.btnThoat.TabIndex = 9;
@@ -174,7 +164,6 @@
             this.Controls.Add(this.txtTenThucUong);
             this.Controls.Add(this.txtMaThucUong);
             this.Controls.Add(this.btnThoat);
-            this.Controls.Add(this.btnChon);
             this.Controls.Add(this.labelControl6);
             this.Controls.Add(this.labelControl5);
             this.Controls.Add(this.labelControl4);
@@ -204,7 +193,6 @@
         public DevExpress.XtraEditors.LabelControl labelControl4;
         public DevExpress.XtraEditors.LabelControl labelControl5;
         public DevExpress.XtraEditors.LabelControl labelControl6;
-        public DevExpress.XtraEditors.SimpleButton btnChon;
         public DevExpress.XtraEditors.SimpleButton btnThoat;
         public DevExpress.XtraEditors.TextEdit txtMaThucUong;
         public DevExpress.XtraEditors.TextEdit txtTenThucUong;

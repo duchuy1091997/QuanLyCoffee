@@ -46,17 +46,19 @@ namespace QuanLyCoffee.QuanLyThucUong
         private void frmDatThucUong_Load(object sender, EventArgs e)
         {
             //Tạo datatable cho danh sách thức uống ở hóa đơn
-            dt.Columns.Add("Mã Thức uống");
+            dt.Columns.Add("Mã Thức Uống");
             dt.Columns.Add("Tên Thức uống");
             dt.Columns.Add("Đơn Giá");
             dt.Columns.Add("Số Lượng");
+            dt.Columns.Add("Thành Tiền");
             //Gán dữ liệu cho dgvThucUong
             gcThucUong.DataSource = typeof(ThucUong_DTO);
             gcThucUong.DataSource = ThucUong_BUL.LoadThucUong();
             //ẩn cột MaLoai
             ShowColumn();
         }
-        private void btnChon_Click(object sender, EventArgs e)
+        //Lấy thức uống được chọn từ gvThucUong gán vào gvDSChon
+        private void GetValue()
         {
             //Lấy dòng dc chọn
             int rowIndex = gvThucUong.FocusedRowHandle;
@@ -75,9 +77,35 @@ namespace QuanLyCoffee.QuanLyThucUong
             string gia = value.ToString().Trim();
             //Lấy số lượng từ SpinEdit
             string soLuong = seSoLuong.Value.ToString();
-            string[] col = { maThucUong,tenThucUong,gia,soLuong};
-            dt.Rows.Add(col);
+            //Thành tiền
+            string thanhTien = (decimal.Parse(gia) * int.Parse(soLuong)).ToString();
+            string[] row = { maThucUong, tenThucUong, gia, soLuong, thanhTien };
+            dt.Rows.Add(row);
             gcDSChon.DataSource = dt;
+        }
+        private void btnChon_Click(object sender, EventArgs e)
+        {
+            bool flag = false;
+            int dong = gvThucUong.FocusedRowHandle;
+            if (gvDSChon.RowCount==0)
+            {
+                GetValue();
+            }
+            else
+            {
+                for (int i = 0; i < gvDSChon.RowCount; i++)
+                {
+                    if (gvThucUong.GetRowCellValue(dong,"MaThucUong").ToString()==gvDSChon.GetRowCellValue(i,"Mã Thức Uống").ToString())
+                    {
+                        MessageBox.Show("Đã có thức uống này trong danh sách chọn!");
+                        flag = true;
+                    }
+                }
+                if (flag==false)
+                {
+                    GetValue();
+                }
+            }
         }
 
         private void btnDat_Click(object sender, EventArgs e)
@@ -159,8 +187,7 @@ namespace QuanLyCoffee.QuanLyThucUong
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
-            int rowIndex = gvThucUong.FocusedRowHandle;
-            MessageBox.Show(rowIndex.ToString());
+            gvDSChon.DeleteSelectedRows();
         }
     }
 }

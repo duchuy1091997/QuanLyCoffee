@@ -12,16 +12,14 @@ namespace DataAccessLayer
     using System;
     using System.Collections.Generic;
     
-    public partial class CTHD
+    public partial class ThucUong_NguyenLieu
     {
-        public int MaCTHD { get; set; }
-        public string MaHD { get; set; }
         public string MaThucUong { get; set; }
-        public Nullable<int> SoLuong { get; set; }
-        public Nullable<double> KhuyenMai { get; set; }
-        public Nullable<decimal> GiaBan { get; set; }
+        public string MaNguyenLieu { get; set; }
+        public Nullable<int> LuongDung { get; set; }
+        public string DonViTinh { get; set; }
     
-        public virtual HoaDon HoaDon { get; set; }
+        public virtual NguyenLieu NguyenLieu { get; set; }
         public virtual ThucUong ThucUong { get; set; }
     }
 }
