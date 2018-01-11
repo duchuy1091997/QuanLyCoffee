@@ -28,7 +28,7 @@ namespace DataAccessLayer
         public virtual DbSet<CTHD> CTHDs { get; set; }
         public virtual DbSet<HoaDon> HoaDons { get; set; }
         public virtual DbSet<KhachHang> KhachHangs { get; set; }
-        public virtual DbSet<LoaiKhachKhang> LoaiKhachKhangs { get; set; }
+        public virtual DbSet<LoaiKhachHang> LoaiKhachHangs { get; set; }
         public virtual DbSet<LoaiNhanVien> LoaiNhanViens { get; set; }
         public virtual DbSet<LoaiThucUong> LoaiThucUongs { get; set; }
         public virtual DbSet<NguyenLieu> NguyenLieux { get; set; }

@@ -38,7 +38,6 @@ namespace QuanLyCoffee
         private void btnLuu_Click(object sender, EventArgs e)
         {
             ThucUong tu = new ThucUong();
-            tu.MaThucUong = txtMaThucUong.Text;
             tu.TenThucUong = txtTenThucUong.Text;
             tu.Gia = decimal.Parse(txtGiaThucUong.Text);
             tu.AnhMinhHoa = txtDuongDan.Text;

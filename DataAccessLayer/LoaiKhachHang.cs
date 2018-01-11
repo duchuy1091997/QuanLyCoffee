@@ -12,10 +12,10 @@ namespace DataAccessLayer
     using System;
     using System.Collections.Generic;
     
-    public partial class LoaiKhachKhang
+    public partial class LoaiKhachHang
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public LoaiKhachKhang()
+        public LoaiKhachHang()
         {
             this.KhachHangs = new HashSet<KhachHang>();
         }

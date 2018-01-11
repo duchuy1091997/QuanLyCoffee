@@ -24,7 +24,7 @@ namespace QuanLyCoffee.QuanLyKhachHang
 
         private void btnThem_Click(object sender, EventArgs e)
         {
-            frmThemNguyenLieu frmThem = new frmThemNguyenLieu();
+            frmThemKhachHang frmThem = new frmThemKhachHang();
             frmThem.ShowDialog();
         }
 
@@ -47,15 +47,16 @@ namespace QuanLyCoffee.QuanLyKhachHang
             gvKhachHang.Columns[1].Caption = "Tên Khách Hàng";
             gvKhachHang.Columns[2].Caption = "Địa Chỉ";
             gvKhachHang.Columns[3].Caption = "Sđt";
-            gvKhachHang.Columns[4].Visible = false;
-            gvKhachHang.Columns[5].Caption = "Loại Khách Hàng";
+            gvKhachHang.Columns[4].Caption = "Giới tính";
+            gvKhachHang.Columns[5].Visible = false;
+            gvKhachHang.Columns[6].Caption = "Loại Khách Hàng";
         }
         //Show thức uống lên grid control
         private void frmShowThucUong_Load(object sender, EventArgs e)
         {
             ReloadGC();
         }
-        //Gán dữ liệu cho gvNguyenLieu
+        //Gán dữ liệu cho gvKhachHang
         public void ReloadGC()
         {
             gcKhachHang.DataSource = typeof(KhachHang);
@@ -65,56 +66,75 @@ namespace QuanLyCoffee.QuanLyKhachHang
 
         private void btnSua_Click(object sender, EventArgs e)
         {
-            frmSuaNguyenLieu frmSua = new frmSuaNguyenLieu();
+            frmSuaKhachHang frmSua = new frmSuaKhachHang();
             //Đưa dữ liệu từ gridControl lên frmSuaNguyenLieu
             int rowIndex = gvKhachHang.FocusedRowHandle;
             string colFieldName;
-            //Lấy cột MaNguyenLieu gán vào txtMaNguyenLieu
-            colFieldName = "MaNguyenLieu";
-            object value = gvKhachHang.GetRowCellValue(rowIndex,colFieldName);
-            string maNguyenLieu = value.ToString().Trim();
-            frmSua.txtMaNguyenLieu.Text = maNguyenLieu;
-            //Lấy cột TenNguyenLieu gán vào txtTenNguyenLieu
-            colFieldName = "TenNguyenLieu";
+            //Lấy cột MaNV gán vào txtMaNV
+            colFieldName = "MaKH";
+            object value = gvKhachHang.GetRowCellValue(rowIndex, colFieldName);
+            string maKH = value.ToString().Trim();
+            if (maKH=="KH00")
+            {
+                MessageBox.Show("Không được sửa khách hàng này!", "Lỗi");
+                return;
+            }
+            frmSua.txtMaKhachHang.Text = maKH;
+            //Lấy cột TenNV gán vào txtTenNV
+            colFieldName = "TenKH";
             value = gvKhachHang.GetRowCellValue(rowIndex, colFieldName);
-            string tenNguyenLieu = value.ToString();
-            frmSua.txtTenNguyenLieu.Text = tenNguyenLieu;
-            //Lấy cột NhaSX gán vào txtNSX
-            colFieldName = "NhaSX";
+            string tenKH = value.ToString();
+            frmSua.txtTenKhachHang.Text = tenKH;
+            //Lấy cột DiaChi gán vào txtDiaChi
+            colFieldName = "DiaChi";
             value = gvKhachHang.GetRowCellValue(rowIndex, colFieldName);
-            string nhaSX = value.ToString();
-            frmSua.txtNSX.Text = nhaSX;
-            //Lấy cột SoLuongTon gán vào txtSLT
-            colFieldName = "SoLuongTon";
+            string diaChi = value.ToString();
+            frmSua.txtDiaChi.Text = diaChi;
+            //Lấy cột sdt gán vào txtsdt
+            colFieldName = "Sdt";
             value = gvKhachHang.GetRowCellValue(rowIndex, colFieldName);
-            string slTon = value.ToString();
-            frmSua.txtSLTon.Text = slTon;
-            //Lấy cột Gia gán vào txtGia
-            colFieldName = "Gia";
+            string sdt = value.ToString();
+            frmSua.txtSDT.Text = sdt;
+            //Lấy cột GioiTinh gán vào radioBtn
+            colFieldName = "GioiTinh";
             value = gvKhachHang.GetRowCellValue(rowIndex, colFieldName);
-            string gia = value.ToString();
-            frmSua.txtGiaNguyenLieu.Text = gia;
-            //Lấy cột NgayNhap gán vào dtNgayNhap
-            colFieldName = "NgayNhap";
+            string gioiTinh = value.ToString().Trim();
+            if (gioiTinh == "Nam")
+            {
+                frmSua.rdNam.Checked = true;
+            }
+            else
+            {
+                if (gioiTinh == "Nữ")
+                {
+                    frmSua.rdNu.Checked = true;
+                }
+                else
+                {
+                    frmSua.rdKhac.Checked = true;
+                }
+            }
+            //Lấy MaLoaiNV gán vào lkLoaiNV
+            colFieldName = "MaLoaiKH";
             value = gvKhachHang.GetRowCellValue(rowIndex, colFieldName);
-            DateTime ngayNhap =DateTime.Parse(value.ToString());
-            frmSua.dtNgayNhap.DateTime = ngayNhap;
-            //Lấy DonViTinh gán vào lkDVT
-            colFieldName = "DonViTinh";
-            value = gvKhachHang.GetRowCellValue(rowIndex, colFieldName);
-            frmSua.lkDVT.EditValue = value;
+            frmSua.lkLoaiKhachHang.EditValue = value;
             frmSua.ShowDialog();
         }
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
             int rowIndex = gvKhachHang.FocusedRowHandle;
-            string colFieldName = "MaNguyenLieu";
+            string colFieldName = "MaKH";
             object value = gvKhachHang.GetRowCellValue(rowIndex,colFieldName);
-            string maNguyenLieu = value.ToString().Trim();
-            if (MessageBox.Show("Bạn có muốn xóa nhân viên có mã "+maNguyenLieu+"?", "Thông Báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            string maKH = value.ToString().Trim();
+            if (maKH == "KH00")
             {
-                NguyenLieu_BUL.DeleteNguyenLieu(maNguyenLieu);
+                MessageBox.Show("Không được xóa khách hàng này!", "Lỗi");
+                return;
+            }
+            if (MessageBox.Show("Bạn có muốn xóa nhân viên có mã "+maKH+"?", "Thông Báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                KhachHang_BUL.DeleteKhachHang(maKH);
                 MessageBox.Show("Xóa thành công!","Thông Báo!");
             }
             else

@@ -101,5 +101,10 @@ namespace QuanLyCoffee
             frmLienHe frmLH = new frmLienHe();
             ShowFormChild(frmLH);
         }
+
+        private void barButtonItem3_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Help.ShowHelp(this, "D:\\15DTH14\\CNPM\\QuanLyCoffee\\QuanLyCoffee\\QuanLyCoffee\\TroGiup\\fileHuongDanSuDung.chm");
+        }
     }
 }

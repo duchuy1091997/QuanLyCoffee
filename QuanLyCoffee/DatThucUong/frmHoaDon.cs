@@ -91,7 +91,6 @@ namespace QuanLyCoffee.DatThucUong
             }
             catch
             {
-
                 MessageBox.Show("Lỗi thêm hóa đơn");
             }
             //Thêm vào CTHD

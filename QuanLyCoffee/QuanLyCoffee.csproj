@@ -119,6 +119,18 @@
     <Compile Include="QuanLyKhachHang\frmShowKhachHang.Designer.cs">
       <DependentUpon>frmShowKhachHang.cs</DependentUpon>
     </Compile>
+    <Compile Include="QuanLyKhachHang\frmSuaKhachHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuanLyKhachHang\frmSuaKhachHang.Designer.cs">
+      <DependentUpon>frmSuaKhachHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLyKhachHang\frmThemKhachHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuanLyKhachHang\frmThemKhachHang.Designer.cs">
+      <DependentUpon>frmThemKhachHang.cs</DependentUpon>
+    </Compile>
     <Compile Include="QuanLyNguyenLieu\frmShowNguyenLieu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -148,6 +160,18 @@
     </Compile>
     <Compile Include="QuanLyNhanVien\frmShowNhanVien.Designer.cs">
       <DependentUpon>frmShowNhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLyNhanVien\frmSuaNhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuanLyNhanVien\frmSuaNhanVien.Designer.cs">
+      <DependentUpon>frmSuaNhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLyNhanVien\frmThemNhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuanLyNhanVien\frmThemNhanVien.Designer.cs">
+      <DependentUpon>frmThemNhanVien.cs</DependentUpon>
     </Compile>
     <Compile Include="QuanLyThucUong\frmShowThucUong.cs">
       <SubType>Form</SubType>
@@ -196,6 +220,12 @@
     <EmbeddedResource Include="QuanLyKhachHang\frmShowKhachHang.resx">
       <DependentUpon>frmShowKhachHang.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="QuanLyKhachHang\frmSuaKhachHang.resx">
+      <DependentUpon>frmSuaKhachHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuanLyKhachHang\frmThemKhachHang.resx">
+      <DependentUpon>frmThemKhachHang.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="QuanLyNguyenLieu\frmShowNguyenLieu.resx">
       <DependentUpon>frmShowNguyenLieu.cs</DependentUpon>
     </EmbeddedResource>
@@ -210,6 +240,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="QuanLyNhanVien\frmShowNhanVien.resx">
       <DependentUpon>frmShowNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuanLyNhanVien\frmSuaNhanVien.resx">
+      <DependentUpon>frmSuaNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuanLyNhanVien\frmThemNhanVien.resx">
+      <DependentUpon>frmThemNhanVien.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="QuanLyThucUong\frmShowThucUong.resx">
       <DependentUpon>frmShowThucUong.cs</DependentUpon>
@@ -242,6 +278,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="TroGiup\fileHuongDanSuDung.chm" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BussinessLogicLayer\BussinessLogicLayer.csproj">

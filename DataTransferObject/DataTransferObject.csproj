@@ -42,6 +42,8 @@
   <ItemGroup>
     <Compile Include="BaoCao_DTO.cs" />
     <Compile Include="KhachHang_DTO.cs" />
+    <Compile Include="LoaiKhachHang_DTO.cs" />
+    <Compile Include="LoaiNhanVien_DTO.cs" />
     <Compile Include="LoaiThucUong_DTO.cs" />
     <Compile Include="NguyenLieu_DTO.cs" />
     <Compile Include="NhanVien_DTO.cs" />

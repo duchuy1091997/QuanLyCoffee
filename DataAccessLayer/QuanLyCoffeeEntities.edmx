@@ -34,9 +34,10 @@
           <Property Name="TenKH" Type="nvarchar" MaxLength="30" />
           <Property Name="DiaChi" Type="nvarchar" MaxLength="50" />
           <Property Name="Sdt" Type="char" MaxLength="13" />
+          <Property Name="GioiTinh" Type="nvarchar" MaxLength="5" />
           <Property Name="MaLoaiKH" Type="char" MaxLength="5" Nullable="false" />
         </EntityType>
-        <EntityType Name="LoaiKhachKhang">
+        <EntityType Name="LoaiKhachHang">
           <Key>
             <PropertyRef Name="MaLoaiKH" />
           </Key>
@@ -48,7 +49,7 @@
           <Key>
             <PropertyRef Name="MaLoaiNV" />
           </Key>
-          <Property Name="MaLoaiNV" Type="char" MaxLength="5" Nullable="false" />
+          <Property Name="MaLoaiNV" Type="char" MaxLength="2" Nullable="false" />
           <Property Name="TenLoaiNV" Type="nvarchar" MaxLength="30" />
           <Property Name="GhiChu" Type="nvarchar" MaxLength="50" />
         </EntityType>
@@ -80,7 +81,7 @@
           <Property Name="DiaChi" Type="nvarchar" MaxLength="50" />
           <Property Name="Sdt" Type="char" MaxLength="13" />
           <Property Name="GioiTinh" Type="nvarchar" MaxLength="5" />
-          <Property Name="MaLoaiNV" Type="char" MaxLength="5" />
+          <Property Name="MaLoaiNV" Type="char" MaxLength="2" Nullable="false" />
         </EntityType>
         <EntityType Name="sysdiagrams">
           <Key>
@@ -145,10 +146,10 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK__KhachHang__MaLoa__276EDEB3">
-          <End Role="LoaiKhachKhang" Type="Self.LoaiKhachKhang" Multiplicity="1" />
+          <End Role="LoaiKhachHang" Type="Self.LoaiKhachHang" Multiplicity="1" />
           <End Role="KhachHang" Type="Self.KhachHang" Multiplicity="*" />
           <ReferentialConstraint>
-            <Principal Role="LoaiKhachKhang">
+            <Principal Role="LoaiKhachHang">
               <PropertyRef Name="MaLoaiKH" />
             </Principal>
             <Dependent Role="KhachHang">
@@ -217,7 +218,7 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_NhanVien_LoaiNhanVien">
-          <End Role="LoaiNhanVien" Type="Self.LoaiNhanVien" Multiplicity="0..1" />
+          <End Role="LoaiNhanVien" Type="Self.LoaiNhanVien" Multiplicity="1" />
           <End Role="NhanVien" Type="Self.NhanVien" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="LoaiNhanVien">
@@ -232,7 +233,7 @@
           <EntitySet Name="CTHD" EntityType="Self.CTHD" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="HoaDon" EntityType="Self.HoaDon" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="KhachHang" EntityType="Self.KhachHang" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="LoaiKhachKhang" EntityType="Self.LoaiKhachKhang" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="LoaiKhachHang" EntityType="Self.LoaiKhachHang" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="LoaiNhanVien" EntityType="Self.LoaiNhanVien" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="LoaiThucUong" EntityType="Self.LoaiThucUong" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="NguyenLieu" EntityType="Self.NguyenLieu" Schema="dbo" store:Type="Tables" />
@@ -250,7 +251,7 @@
             <End Role="HoaDon" EntitySet="HoaDon" />
           </AssociationSet>
           <AssociationSet Name="FK__KhachHang__MaLoa__276EDEB3" Association="Self.FK__KhachHang__MaLoa__276EDEB3">
-            <End Role="LoaiKhachKhang" EntitySet="LoaiKhachKhang" />
+            <End Role="LoaiKhachHang" EntitySet="LoaiKhachHang" />
             <End Role="KhachHang" EntitySet="KhachHang" />
           </AssociationSet>
           <AssociationSet Name="FK__ThucUong___MaNgu__286302EC" Association="Self.FK__ThucUong___MaNgu__286302EC">
@@ -286,7 +287,7 @@
           <EntitySet Name="CTHDs" EntityType="QuanLyCoffeeModel.CTHD" />
           <EntitySet Name="HoaDons" EntityType="QuanLyCoffeeModel.HoaDon" />
           <EntitySet Name="KhachHangs" EntityType="QuanLyCoffeeModel.KhachHang" />
-          <EntitySet Name="LoaiKhachKhangs" EntityType="QuanLyCoffeeModel.LoaiKhachKhang" />
+          <EntitySet Name="LoaiKhachHangs" EntityType="QuanLyCoffeeModel.LoaiKhachHang" />
           <EntitySet Name="LoaiNhanViens" EntityType="QuanLyCoffeeModel.LoaiNhanVien" />
           <EntitySet Name="LoaiThucUongs" EntityType="QuanLyCoffeeModel.LoaiThucUong" />
           <EntitySet Name="NguyenLieux" EntityType="QuanLyCoffeeModel.NguyenLieu" />
@@ -312,7 +313,7 @@
             <End Role="HoaDon" EntitySet="HoaDons" />
           </AssociationSet>
           <AssociationSet Name="FK__KhachHang__MaLoa__276EDEB3" Association="QuanLyCoffeeModel.FK__KhachHang__MaLoa__276EDEB3">
-            <End Role="LoaiKhachKhang" EntitySet="LoaiKhachKhangs" />
+            <End Role="LoaiKhachHang" EntitySet="LoaiKhachHangs" />
             <End Role="KhachHang" EntitySet="KhachHangs" />
           </AssociationSet>
           <AssociationSet Name="FK_NhanVien_LoaiNhanVien" Association="QuanLyCoffeeModel.FK_NhanVien_LoaiNhanVien">
@@ -366,24 +367,25 @@
           <Property Name="TenKH" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
           <Property Name="DiaChi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="Sdt" Type="String" MaxLength="13" FixedLength="true" Unicode="false" />
+          <Property Name="GioiTinh" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
           <Property Name="MaLoaiKH" Type="String" Nullable="false" MaxLength="5" FixedLength="true" Unicode="false" />
           <NavigationProperty Name="HoaDons" Relationship="QuanLyCoffeeModel.FK__HoaDon__MaKH__239E4DCF" FromRole="KhachHang" ToRole="HoaDon" />
-          <NavigationProperty Name="LoaiKhachKhang" Relationship="QuanLyCoffeeModel.FK__KhachHang__MaLoa__276EDEB3" FromRole="KhachHang" ToRole="LoaiKhachKhang" />
+          <NavigationProperty Name="LoaiKhachHang" Relationship="QuanLyCoffeeModel.FK__KhachHang__MaLoa__276EDEB3" FromRole="KhachHang" ToRole="LoaiKhachHang" />
         </EntityType>
-        <EntityType Name="LoaiKhachKhang">
+        <EntityType Name="LoaiKhachHang">
           <Key>
             <PropertyRef Name="MaLoaiKH" />
           </Key>
           <Property Name="MaLoaiKH" Type="String" Nullable="false" MaxLength="5" FixedLength="true" Unicode="false" />
           <Property Name="TenLoaiKH" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
           <Property Name="GhiChu" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="KhachHangs" Relationship="QuanLyCoffeeModel.FK__KhachHang__MaLoa__276EDEB3" FromRole="LoaiKhachKhang" ToRole="KhachHang" />
+          <NavigationProperty Name="KhachHangs" Relationship="QuanLyCoffeeModel.FK__KhachHang__MaLoa__276EDEB3" FromRole="LoaiKhachHang" ToRole="KhachHang" />
         </EntityType>
         <EntityType Name="LoaiNhanVien">
           <Key>
             <PropertyRef Name="MaLoaiNV" />
           </Key>
-          <Property Name="MaLoaiNV" Type="String" Nullable="false" MaxLength="5" FixedLength="true" Unicode="false" />
+          <Property Name="MaLoaiNV" Type="String" Nullable="false" MaxLength="2" FixedLength="true" Unicode="false" />
           <Property Name="TenLoaiNV" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
           <Property Name="GhiChu" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="NhanViens" Relationship="QuanLyCoffeeModel.FK_NhanVien_LoaiNhanVien" FromRole="LoaiNhanVien" ToRole="NhanVien" />
@@ -418,7 +420,7 @@
           <Property Name="DiaChi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="Sdt" Type="String" MaxLength="13" FixedLength="true" Unicode="false" />
           <Property Name="GioiTinh" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
-          <Property Name="MaLoaiNV" Type="String" MaxLength="5" FixedLength="true" Unicode="false" />
+          <Property Name="MaLoaiNV" Type="String" Nullable="false" MaxLength="2" FixedLength="true" Unicode="false" />
           <NavigationProperty Name="HoaDons" Relationship="QuanLyCoffeeModel.FK__HoaDon__MaNV__25869641" FromRole="NhanVien" ToRole="HoaDon" />
           <NavigationProperty Name="LoaiNhanVien" Relationship="QuanLyCoffeeModel.FK_NhanVien_LoaiNhanVien" FromRole="NhanVien" ToRole="LoaiNhanVien" />
         </EntityType>
@@ -514,10 +516,10 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK__KhachHang__MaLoa__276EDEB3">
-          <End Type="QuanLyCoffeeModel.LoaiKhachKhang" Role="LoaiKhachKhang" Multiplicity="1" />
+          <End Type="QuanLyCoffeeModel.LoaiKhachHang" Role="LoaiKhachHang" Multiplicity="1" />
           <End Type="QuanLyCoffeeModel.KhachHang" Role="KhachHang" Multiplicity="*" />
           <ReferentialConstraint>
-            <Principal Role="LoaiKhachKhang">
+            <Principal Role="LoaiKhachHang">
               <PropertyRef Name="MaLoaiKH" />
             </Principal>
             <Dependent Role="KhachHang">
@@ -526,7 +528,7 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_NhanVien_LoaiNhanVien">
-          <End Type="QuanLyCoffeeModel.LoaiNhanVien" Role="LoaiNhanVien" Multiplicity="0..1" />
+          <End Type="QuanLyCoffeeModel.LoaiNhanVien" Role="LoaiNhanVien" Multiplicity="1" />
           <End Type="QuanLyCoffeeModel.NhanVien" Role="NhanVien" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="LoaiNhanVien">
@@ -606,6 +608,7 @@
             <EntityTypeMapping TypeName="QuanLyCoffeeModel.KhachHang">
               <MappingFragment StoreEntitySet="KhachHang">
                 <ScalarProperty Name="MaLoaiKH" ColumnName="MaLoaiKH" />
+                <ScalarProperty Name="GioiTinh" ColumnName="GioiTinh" />
                 <ScalarProperty Name="Sdt" ColumnName="Sdt" />
                 <ScalarProperty Name="DiaChi" ColumnName="DiaChi" />
                 <ScalarProperty Name="TenKH" ColumnName="TenKH" />
@@ -613,9 +616,9 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="LoaiKhachKhangs">
-            <EntityTypeMapping TypeName="QuanLyCoffeeModel.LoaiKhachKhang">
-              <MappingFragment StoreEntitySet="LoaiKhachKhang">
+          <EntitySetMapping Name="LoaiKhachHangs">
+            <EntityTypeMapping TypeName="QuanLyCoffeeModel.LoaiKhachHang">
+              <MappingFragment StoreEntitySet="LoaiKhachHang">
                 <ScalarProperty Name="GhiChu" ColumnName="GhiChu" />
                 <ScalarProperty Name="TenLoaiKH" ColumnName="TenLoaiKH" />
                 <ScalarProperty Name="MaLoaiKH" ColumnName="MaLoaiKH" />

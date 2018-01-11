@@ -24,10 +24,11 @@ namespace DataAccessLayer
         public string TenKH { get; set; }
         public string DiaChi { get; set; }
         public string Sdt { get; set; }
+        public string GioiTinh { get; set; }
         public string MaLoaiKH { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<HoaDon> HoaDons { get; set; }
-        public virtual LoaiKhachKhang LoaiKhachKhang { get; set; }
+        public virtual LoaiKhachHang LoaiKhachHang { get; set; }
     }
 }

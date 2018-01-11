@@ -76,12 +76,14 @@
       <DependentUpon>QuanLyCoffeeEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="KhachHang_DAL.cs" />
-    <Compile Include="LoaiKhachKhang.cs">
+    <Compile Include="LoaiKhachHang.cs">
       <DependentUpon>QuanLyCoffeeEntities.tt</DependentUpon>
     </Compile>
+    <Compile Include="LoaiKhachHang_DAL.cs" />
     <Compile Include="LoaiNhanVien.cs">
       <DependentUpon>QuanLyCoffeeEntities.tt</DependentUpon>
     </Compile>
+    <Compile Include="LoaiNhanVien_DAL.cs" />
     <Compile Include="LoaiThucUong.cs">
       <DependentUpon>QuanLyCoffeeEntities.tt</DependentUpon>
     </Compile>
