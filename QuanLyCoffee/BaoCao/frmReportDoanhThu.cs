@@ -12,6 +12,7 @@ using BussinessLogicLayer;
 using DataTransferObject;
 using System.IO;
 using DataAccessLayer;
+using System.Data.SqlClient;
 
 namespace QuanLyCoffee.BaoCao
 {
@@ -38,6 +39,44 @@ namespace QuanLyCoffee.BaoCao
         private void frmReportDoanhThu_Load(object sender, EventArgs e)
         {
             rpDoanhThu rp = new rpDoanhThu();
+            string chuoiKetNoi = "Data Source=DESKTOP-QR164ON\\SQLEXPRESS;Initial Catalog=QuanLyCoffee;Integrated Security=True";
+            string selectHD = "select * from HoaDon";
+            SqlConnection connection = new SqlConnection();
+            connection.ConnectionString = chuoiKetNoi;
+            connection.Open();
+
+            SqlDataAdapter dta = new SqlDataAdapter(selectHD, connection);
+            DataTable dt = new DataTable();
+            dta.Fill(dt);
+            rp.SetDataSource(dt);
+            rpViewer.ReportSource = rp;
+            connection.Close();
+        }
+
+        private void dtNgayXem_DateTimeChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                rpDoanhThu rp = new rpDoanhThu();
+                string chuoiKetNoi = "Data Source=DESKTOP-QR164ON\\SQLEXPRESS;Initial Catalog=QuanLyCoffee;Integrated Security=True";
+                string selectHD = "select * from HoaDon where NgayLap='"+dtNgayXem.DateTime.ToString("yyyy-MM-dd")+"'";
+                SqlConnection connection = new SqlConnection();
+                connection.ConnectionString = chuoiKetNoi;
+                connection.Open();
+
+                SqlDataAdapter dta = new SqlDataAdapter(selectHD, connection);
+                DataTable dt = new DataTable();
+                dta.Fill(dt);
+                rp.SetDataSource(dt);
+                rpViewer.ReportSource = rp;
+                connection.Close();
+            }
+            catch
+            {
+                MessageBox.Show("Không có hóa đơn của ngày "+dtNgayXem.Text);
+                return;
+            }
+           
         }
     }
 }

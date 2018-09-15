@@ -136,6 +136,7 @@
             // 
             this.txtMaThucUong.Location = new System.Drawing.Point(170, 85);
             this.txtMaThucUong.Name = "txtMaThucUong";
+            this.txtMaThucUong.Properties.MaxLength = 5;
             this.txtMaThucUong.Size = new System.Drawing.Size(203, 20);
             this.txtMaThucUong.TabIndex = 1;
             this.txtMaThucUong.TabIndexChanged += new System.EventHandler(this.btnChon_Click);
@@ -188,7 +189,7 @@
             this.lkLoaiThucUong.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.lkLoaiThucUong.Size = new System.Drawing.Size(203, 20);
-            this.lkLoaiThucUong.TabIndex = 11;
+            this.lkLoaiThucUong.TabIndex = 4;
             // 
             // frmThemThucUong
             // 

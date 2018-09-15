@@ -112,7 +112,7 @@
             this.btnLuu.Location = new System.Drawing.Point(91, 471);
             this.btnLuu.Name = "btnLuu";
             this.btnLuu.Size = new System.Drawing.Size(75, 23);
-            this.btnLuu.TabIndex = 7;
+            this.btnLuu.TabIndex = 8;
             this.btnLuu.Text = "Lưu";
             this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
             // 
@@ -122,7 +122,7 @@
             this.btnDatLai.Location = new System.Drawing.Point(195, 471);
             this.btnDatLai.Name = "btnDatLai";
             this.btnDatLai.Size = new System.Drawing.Size(75, 23);
-            this.btnDatLai.TabIndex = 8;
+            this.btnDatLai.TabIndex = 9;
             this.btnDatLai.Text = "Đặt Lại";
             // 
             // btnThoat
@@ -131,7 +131,7 @@
             this.btnThoat.Location = new System.Drawing.Point(298, 471);
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.Size = new System.Drawing.Size(75, 23);
-            this.btnThoat.TabIndex = 9;
+            this.btnThoat.TabIndex = 10;
             this.btnThoat.Text = "Thoát";
             // 
             // txtMaNguyenLieu
@@ -161,7 +161,7 @@
             this.txtSLTon.Location = new System.Drawing.Point(170, 254);
             this.txtSLTon.Name = "txtSLTon";
             this.txtSLTon.Size = new System.Drawing.Size(135, 20);
-            this.txtSLTon.TabIndex = 3;
+            this.txtSLTon.TabIndex = 4;
             // 
             // dtNgayNhap
             // 
@@ -173,7 +173,7 @@
             this.dtNgayNhap.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.dtNgayNhap.Size = new System.Drawing.Size(203, 20);
-            this.dtNgayNhap.TabIndex = 10;
+            this.dtNgayNhap.TabIndex = 6;
             // 
             // labelControl7
             // 
@@ -188,7 +188,7 @@
             this.txtNSX.Location = new System.Drawing.Point(170, 363);
             this.txtNSX.Name = "txtNSX";
             this.txtNSX.Size = new System.Drawing.Size(203, 20);
-            this.txtNSX.TabIndex = 1;
+            this.txtNSX.TabIndex = 7;
             // 
             // lkDVT
             // 
@@ -197,7 +197,7 @@
             this.lkDVT.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.lkDVT.Size = new System.Drawing.Size(62, 20);
-            this.lkDVT.TabIndex = 11;
+            this.lkDVT.TabIndex = 5;
             // 
             // frmSuaNguyenLieu
             // 

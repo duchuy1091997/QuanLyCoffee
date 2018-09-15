@@ -46,5 +46,13 @@ namespace QuanLyCoffee
                 MessageBox.Show("Sai mật khẩu hoặc tên đăng nhập!", "Thông Báo");
             }
         }
+
+        private void frmDangNhap_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Escape)
+            {
+                this.Close();
+            }
+        }
     }
 }

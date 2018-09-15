@@ -69,16 +69,16 @@ namespace QuanLyCoffee.DatThucUong
 
         private void frmHoaDon_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (MessageBox.Show("Bạn có muốn hủy hóa đơn "+txtMaHD.Text+" này?", "Thông Báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
-            {
-                e.Cancel = true;
-            }
+            //if (MessageBox.Show("Bạn có muốn hủy hóa đơn "+txtMaHD.Text+" này?", "Thông Báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
+            //{
+            //    e.Cancel = true;
+            //}
         }
 
         private void btnXuatHD_Click(object sender, EventArgs e)
         {
             HoaDon hd = new HoaDon();
-            CTHD cthd = new CTHD();
+            
             //Thêm hóa đơn
             try
             {
@@ -96,8 +96,10 @@ namespace QuanLyCoffee.DatThucUong
             //Thêm vào CTHD
             try
             {
+                
                 for (int i = 0; i < gvHoaDon.RowCount; i++)
                 {
+                    CTHD cthd = new CTHD();
                     //Mã HD
                     cthd.MaHD = txtMaHD.Text;
                     //Mã Thức uống

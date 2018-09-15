@@ -14,7 +14,6 @@ namespace DataAccessLayer
     
     public partial class CTHD
     {
-        public int MaCTHD { get; set; }
         public string MaHD { get; set; }
         public string MaThucUong { get; set; }
         public Nullable<int> SoLuong { get; set; }

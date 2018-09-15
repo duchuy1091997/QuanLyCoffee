@@ -94,7 +94,7 @@
             this.btnLuu.Location = new System.Drawing.Point(91, 471);
             this.btnLuu.Name = "btnLuu";
             this.btnLuu.Size = new System.Drawing.Size(75, 23);
-            this.btnLuu.TabIndex = 7;
+            this.btnLuu.TabIndex = 8;
             this.btnLuu.Text = "Lưu";
             this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
             // 
@@ -104,7 +104,7 @@
             this.btnDatLai.Location = new System.Drawing.Point(195, 471);
             this.btnDatLai.Name = "btnDatLai";
             this.btnDatLai.Size = new System.Drawing.Size(75, 23);
-            this.btnDatLai.TabIndex = 8;
+            this.btnDatLai.TabIndex = 9;
             this.btnDatLai.Text = "Đặt Lại";
             this.btnDatLai.Click += new System.EventHandler(this.btnDatLai_Click);
             // 
@@ -114,7 +114,7 @@
             this.btnThoat.Location = new System.Drawing.Point(298, 471);
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.Size = new System.Drawing.Size(75, 23);
-            this.btnThoat.TabIndex = 9;
+            this.btnThoat.TabIndex = 10;
             this.btnThoat.Text = "Thoát";
             this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
@@ -123,22 +123,23 @@
             this.txtMaKhachHang.Location = new System.Drawing.Point(170, 85);
             this.txtMaKhachHang.Name = "txtMaKhachHang";
             this.txtMaKhachHang.Properties.MaxLength = 5;
+            this.txtMaKhachHang.Properties.ReadOnly = true;
             this.txtMaKhachHang.Size = new System.Drawing.Size(203, 20);
-            this.txtMaKhachHang.TabIndex = 1;
+            this.txtMaKhachHang.TabIndex = 0;
             // 
             // txtTenKhachHang
             // 
             this.txtTenKhachHang.Location = new System.Drawing.Point(170, 137);
             this.txtTenKhachHang.Name = "txtTenKhachHang";
             this.txtTenKhachHang.Size = new System.Drawing.Size(203, 20);
-            this.txtTenKhachHang.TabIndex = 2;
+            this.txtTenKhachHang.TabIndex = 1;
             // 
             // txtDiaChi
             // 
             this.txtDiaChi.Location = new System.Drawing.Point(170, 192);
             this.txtDiaChi.Name = "txtDiaChi";
             this.txtDiaChi.Size = new System.Drawing.Size(203, 20);
-            this.txtDiaChi.TabIndex = 3;
+            this.txtDiaChi.TabIndex = 2;
             // 
             // lkLoaiKhachHang
             // 
@@ -147,7 +148,7 @@
             this.lkLoaiKhachHang.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.lkLoaiKhachHang.Size = new System.Drawing.Size(203, 20);
-            this.lkLoaiKhachHang.TabIndex = 11;
+            this.lkLoaiKhachHang.TabIndex = 7;
             // 
             // txtSDT
             // 
@@ -180,7 +181,7 @@
             this.rdNam.Location = new System.Drawing.Point(170, 304);
             this.rdNam.Name = "rdNam";
             this.rdNam.Size = new System.Drawing.Size(46, 17);
-            this.rdNam.TabIndex = 12;
+            this.rdNam.TabIndex = 4;
             this.rdNam.TabStop = true;
             this.rdNam.Text = "Nam";
             this.rdNam.UseVisualStyleBackColor = true;
@@ -191,7 +192,7 @@
             this.rdNu.Location = new System.Drawing.Point(231, 304);
             this.rdNu.Name = "rdNu";
             this.rdNu.Size = new System.Drawing.Size(39, 17);
-            this.rdNu.TabIndex = 12;
+            this.rdNu.TabIndex = 5;
             this.rdNu.Text = "Nữ";
             this.rdNu.UseVisualStyleBackColor = true;
             // 
@@ -201,7 +202,7 @@
             this.rdKhac.Location = new System.Drawing.Point(287, 304);
             this.rdKhac.Name = "rdKhac";
             this.rdKhac.Size = new System.Drawing.Size(48, 17);
-            this.rdKhac.TabIndex = 12;
+            this.rdKhac.TabIndex = 6;
             this.rdKhac.Text = "Khác";
             this.rdKhac.UseVisualStyleBackColor = true;
             // 

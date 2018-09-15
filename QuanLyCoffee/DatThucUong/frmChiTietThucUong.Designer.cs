@@ -101,7 +101,7 @@
             // btnThoat
             // 
             this.btnThoat.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnThoat.ImageOptions.Image")));
-            this.btnThoat.Location = new System.Drawing.Point(211, 468);
+            this.btnThoat.Location = new System.Drawing.Point(211, 506);
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.Size = new System.Drawing.Size(75, 23);
             this.btnThoat.TabIndex = 9;
@@ -150,7 +150,7 @@
             this.pteHinhMinhHoa.Properties.ReadOnly = true;
             this.pteHinhMinhHoa.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
             this.pteHinhMinhHoa.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
-            this.pteHinhMinhHoa.Size = new System.Drawing.Size(134, 144);
+            this.pteHinhMinhHoa.Size = new System.Drawing.Size(203, 180);
             this.pteHinhMinhHoa.TabIndex = 10;
             // 
             // frmChiTietThucUong

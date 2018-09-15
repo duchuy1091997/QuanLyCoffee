@@ -106,5 +106,13 @@ namespace QuanLyCoffee
         {
             Help.ShowHelp(this, "D:\\15DTH14\\CNPM\\QuanLyCoffee\\QuanLyCoffee\\QuanLyCoffee\\TroGiup\\fileHuongDanSuDung.chm");
         }
+
+        private void frmTrangChinh_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode==Keys.Escape)
+            {
+                this.Close();
+            }
+        }
     }
 }

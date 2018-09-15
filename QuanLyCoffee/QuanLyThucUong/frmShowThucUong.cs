@@ -11,6 +11,7 @@ using DevExpress.XtraEditors;
 using BussinessLogicLayer;
 using DataTransferObject;
 using System.IO;
+using DevExpress.XtraEditors.Repository;
 
 namespace QuanLyCoffee.QuanLyThucUong
 {
@@ -42,6 +43,7 @@ namespace QuanLyCoffee.QuanLyThucUong
         //ẩn cột MaLoai
         private void ShowColumn()
         {
+            //Column
             gvThucUong.Columns[0].Caption = "Mã Thức Uống";
             gvThucUong.Columns[1].Caption = "Tên Thức Uống";
             gvThucUong.Columns[2].Caption = "Giá";

@@ -120,7 +120,7 @@
             this.btnXuatHD.Location = new System.Drawing.Point(175, 421);
             this.btnXuatHD.Name = "btnXuatHD";
             this.btnXuatHD.Size = new System.Drawing.Size(106, 23);
-            this.btnXuatHD.TabIndex = 3;
+            this.btnXuatHD.TabIndex = 4;
             this.btnXuatHD.Text = "Xuất hóa đơn";
             this.btnXuatHD.Click += new System.EventHandler(this.btnXuatHD_Click);
             // 
@@ -130,7 +130,7 @@
             this.btnHuy.Location = new System.Drawing.Point(333, 421);
             this.btnHuy.Name = "btnHuy";
             this.btnHuy.Size = new System.Drawing.Size(106, 23);
-            this.btnHuy.TabIndex = 3;
+            this.btnHuy.TabIndex = 5;
             this.btnHuy.Text = "Hủy";
             this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
             // 
@@ -140,7 +140,7 @@
             this.txtMaHD.Name = "txtMaHD";
             this.txtMaHD.Properties.ReadOnly = true;
             this.txtMaHD.Size = new System.Drawing.Size(159, 20);
-            this.txtMaHD.TabIndex = 4;
+            this.txtMaHD.TabIndex = 0;
             // 
             // dtNgayLap
             // 
@@ -153,7 +153,7 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.dtNgayLap.Properties.ReadOnly = true;
             this.dtNgayLap.Size = new System.Drawing.Size(159, 20);
-            this.dtNgayLap.TabIndex = 5;
+            this.dtNgayLap.TabIndex = 0;
             // 
             // labelControl7
             // 
@@ -170,7 +170,7 @@
             this.lkNhanVien.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.lkNhanVien.Size = new System.Drawing.Size(159, 20);
-            this.lkNhanVien.TabIndex = 6;
+            this.lkNhanVien.TabIndex = 3;
             // 
             // labelControl8
             // 
@@ -187,7 +187,7 @@
             this.lkKhachHang.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.lkKhachHang.Size = new System.Drawing.Size(159, 20);
-            this.lkKhachHang.TabIndex = 6;
+            this.lkKhachHang.TabIndex = 2;
             // 
             // frmHoaDon
             // 

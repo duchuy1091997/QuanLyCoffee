@@ -32,9 +32,9 @@
             this.btnThoat = new DevExpress.XtraEditors.SimpleButton();
             this.rpViewer = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
             this.label1 = new System.Windows.Forms.Label();
-            this.dateEdit1 = new DevExpress.XtraEditors.DateEdit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties.CalendarTimeProperties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties)).BeginInit();
+            this.dtNgayXem = new DevExpress.XtraEditors.DateEdit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtNgayXem.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtNgayXem.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // btnThoat
@@ -66,24 +66,25 @@
             this.label1.TabIndex = 8;
             this.label1.Text = "Nhập ngày muốn xem doanh thu:";
             // 
-            // dateEdit1
+            // dtNgayXem
             // 
-            this.dateEdit1.EditValue = null;
-            this.dateEdit1.Location = new System.Drawing.Point(234, 19);
-            this.dateEdit1.Name = "dateEdit1";
-            this.dateEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.dtNgayXem.EditValue = null;
+            this.dtNgayXem.Location = new System.Drawing.Point(234, 19);
+            this.dtNgayXem.Name = "dtNgayXem";
+            this.dtNgayXem.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateEdit1.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.dtNgayXem.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateEdit1.Size = new System.Drawing.Size(353, 20);
-            this.dateEdit1.TabIndex = 9;
+            this.dtNgayXem.Size = new System.Drawing.Size(353, 20);
+            this.dtNgayXem.TabIndex = 9;
+            this.dtNgayXem.DateTimeChanged += new System.EventHandler(this.dtNgayXem_DateTimeChanged);
             // 
             // frmReportDoanhThu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(984, 461);
-            this.Controls.Add(this.dateEdit1);
+            this.Controls.Add(this.dtNgayXem);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.rpViewer);
             this.Controls.Add(this.btnThoat);
@@ -91,8 +92,8 @@
             this.Text = "Báo cáo doanh thu";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmReportDoanhThu_FormClosing);
             this.Load += new System.EventHandler(this.frmReportDoanhThu_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties.CalendarTimeProperties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtNgayXem.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtNgayXem.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -102,6 +103,6 @@
         private DevExpress.XtraEditors.SimpleButton btnThoat;
         private CrystalDecisions.Windows.Forms.CrystalReportViewer rpViewer;
         private System.Windows.Forms.Label label1;
-        private DevExpress.XtraEditors.DateEdit dateEdit1;
+        private DevExpress.XtraEditors.DateEdit dtNgayXem;
     }
 }

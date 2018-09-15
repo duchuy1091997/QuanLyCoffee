@@ -94,7 +94,7 @@
             this.btnLuu.Location = new System.Drawing.Point(91, 471);
             this.btnLuu.Name = "btnLuu";
             this.btnLuu.Size = new System.Drawing.Size(75, 23);
-            this.btnLuu.TabIndex = 7;
+            this.btnLuu.TabIndex = 9;
             this.btnLuu.Text = "Lưu";
             this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
             // 
@@ -104,7 +104,7 @@
             this.btnDatLai.Location = new System.Drawing.Point(195, 471);
             this.btnDatLai.Name = "btnDatLai";
             this.btnDatLai.Size = new System.Drawing.Size(75, 23);
-            this.btnDatLai.TabIndex = 8;
+            this.btnDatLai.TabIndex = 10;
             this.btnDatLai.Text = "Đặt Lại";
             this.btnDatLai.Click += new System.EventHandler(this.btnDatLai_Click);
             // 
@@ -114,7 +114,7 @@
             this.btnThoat.Location = new System.Drawing.Point(298, 471);
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.Size = new System.Drawing.Size(75, 23);
-            this.btnThoat.TabIndex = 9;
+            this.btnThoat.TabIndex = 11;
             this.btnThoat.Text = "Thoát";
             this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
@@ -147,7 +147,7 @@
             this.lkLoaiNhanVien.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.lkLoaiNhanVien.Size = new System.Drawing.Size(203, 20);
-            this.lkLoaiNhanVien.TabIndex = 11;
+            this.lkLoaiNhanVien.TabIndex = 8;
             // 
             // txtSDT
             // 
@@ -155,7 +155,7 @@
             this.txtSDT.Name = "txtSDT";
             this.txtSDT.Properties.MaxLength = 13;
             this.txtSDT.Size = new System.Drawing.Size(203, 20);
-            this.txtSDT.TabIndex = 3;
+            this.txtSDT.TabIndex = 4;
             // 
             // labelControl6
             // 
@@ -180,7 +180,7 @@
             this.rdNam.Location = new System.Drawing.Point(170, 304);
             this.rdNam.Name = "rdNam";
             this.rdNam.Size = new System.Drawing.Size(46, 17);
-            this.rdNam.TabIndex = 12;
+            this.rdNam.TabIndex = 5;
             this.rdNam.TabStop = true;
             this.rdNam.Text = "Nam";
             this.rdNam.UseVisualStyleBackColor = true;
@@ -191,7 +191,7 @@
             this.rdNu.Location = new System.Drawing.Point(231, 304);
             this.rdNu.Name = "rdNu";
             this.rdNu.Size = new System.Drawing.Size(39, 17);
-            this.rdNu.TabIndex = 12;
+            this.rdNu.TabIndex = 6;
             this.rdNu.Text = "Nữ";
             this.rdNu.UseVisualStyleBackColor = true;
             // 
@@ -201,7 +201,7 @@
             this.rdKhac.Location = new System.Drawing.Point(287, 304);
             this.rdKhac.Name = "rdKhac";
             this.rdKhac.Size = new System.Drawing.Size(48, 17);
-            this.rdKhac.TabIndex = 12;
+            this.rdKhac.TabIndex = 7;
             this.rdKhac.Text = "Khác";
             this.rdKhac.UseVisualStyleBackColor = true;
             // 
@@ -239,7 +239,7 @@
             this.MaximizeBox = false;
             this.Name = "frmThemNhanVien";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Thêm Thức Uống";
+            this.Text = "Thêm Nhân Viên";
             this.Load += new System.EventHandler(this.frmThemNhanVien_Load);
             ((System.ComponentModel.ISupportInitialize)(this.txtMaNhanVien.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTenNhanVien.Properties)).EndInit();
