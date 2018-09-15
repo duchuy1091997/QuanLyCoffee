@@ -79,7 +79,11 @@ namespace QuanLyCoffee.QuanLyThucUong
             string soLuong = seSoLuong.Value.ToString();
             //Thành tiền
             string thanhTien = (decimal.Parse(gia) * int.Parse(soLuong)).ToString();
+<<<<<<< HEAD
             string[] row = { maThucUong, tenThucUong, gia, soLuong, thanhTien };
+=======
+            string[] row = { maThucUong,tenThucUong,gia,soLuong,thanhTien};
+>>>>>>> e723d41e68fa06675e63c7d63cd30acf63448353
             dt.Rows.Add(row);
             gcDSChon.DataSource = dt;
         }

@@ -287,8 +287,12 @@
           <EntitySet Name="CTHDs" EntityType="QuanLyCoffeeModel.CTHD" />
           <EntitySet Name="HoaDons" EntityType="QuanLyCoffeeModel.HoaDon" />
           <EntitySet Name="KhachHangs" EntityType="QuanLyCoffeeModel.KhachHang" />
+<<<<<<< HEAD
           <EntitySet Name="LoaiKhachHangs" EntityType="QuanLyCoffeeModel.LoaiKhachHang" />
           <EntitySet Name="LoaiNhanViens" EntityType="QuanLyCoffeeModel.LoaiNhanVien" />
+=======
+          <EntitySet Name="LoaiKhachKhangs" EntityType="QuanLyCoffeeModel.LoaiKhachKhang" />
+>>>>>>> e723d41e68fa06675e63c7d63cd30acf63448353
           <EntitySet Name="LoaiThucUongs" EntityType="QuanLyCoffeeModel.LoaiThucUong" />
           <EntitySet Name="NguyenLieux" EntityType="QuanLyCoffeeModel.NguyenLieu" />
           <EntitySet Name="NhanViens" EntityType="QuanLyCoffeeModel.NhanVien" />
@@ -296,11 +300,19 @@
           <EntitySet Name="ThucUongs" EntityType="QuanLyCoffeeModel.ThucUong" />
           <EntitySet Name="ThucUong_NguyenLieu" EntityType="QuanLyCoffeeModel.ThucUong_NguyenLieu" />
           <EntitySet Name="Users" EntityType="QuanLyCoffeeModel.User" />
+<<<<<<< HEAD
           <AssociationSet Name="FK_CTHD_HoaDon" Association="QuanLyCoffeeModel.FK_CTHD_HoaDon">
             <End Role="HoaDon" EntitySet="HoaDons" />
             <End Role="CTHD" EntitySet="CTHDs" />
           </AssociationSet>
           <AssociationSet Name="FK_CTHD_ThucUong" Association="QuanLyCoffeeModel.FK_CTHD_ThucUong">
+=======
+          <AssociationSet Name="FK__CTHD__MaHD__24927208" Association="QuanLyCoffeeModel.FK__CTHD__MaHD__24927208">
+            <End Role="HoaDon" EntitySet="HoaDons" />
+            <End Role="CTHD" EntitySet="CTHDs" />
+          </AssociationSet>
+          <AssociationSet Name="FK__CTHD__MaThucUong__21B6055D" Association="QuanLyCoffeeModel.FK__CTHD__MaThucUong__21B6055D">
+>>>>>>> e723d41e68fa06675e63c7d63cd30acf63448353
             <End Role="ThucUong" EntitySet="ThucUongs" />
             <End Role="CTHD" EntitySet="CTHDs" />
           </AssociationSet>
@@ -313,6 +325,7 @@
             <End Role="HoaDon" EntitySet="HoaDons" />
           </AssociationSet>
           <AssociationSet Name="FK__KhachHang__MaLoa__276EDEB3" Association="QuanLyCoffeeModel.FK__KhachHang__MaLoa__276EDEB3">
+<<<<<<< HEAD
             <End Role="LoaiKhachHang" EntitySet="LoaiKhachHangs" />
             <End Role="KhachHang" EntitySet="KhachHangs" />
           </AssociationSet>
@@ -320,6 +333,11 @@
             <End Role="LoaiNhanVien" EntitySet="LoaiNhanViens" />
             <End Role="NhanVien" EntitySet="NhanViens" />
           </AssociationSet>
+=======
+            <End Role="LoaiKhachKhang" EntitySet="LoaiKhachKhangs" />
+            <End Role="KhachHang" EntitySet="KhachHangs" />
+          </AssociationSet>
+>>>>>>> e723d41e68fa06675e63c7d63cd30acf63448353
           <AssociationSet Name="FK__ThucUong__MaLoai__267ABA7A" Association="QuanLyCoffeeModel.FK__ThucUong__MaLoai__267ABA7A">
             <End Role="LoaiThucUong" EntitySet="LoaiThucUongs" />
             <End Role="ThucUong" EntitySet="ThucUongs" />
@@ -343,8 +361,13 @@
           <Property Name="SoLuong" Type="Int32" />
           <Property Name="KhuyenMai" Type="Double" />
           <Property Name="GiaBan" Type="Decimal" Precision="18" Scale="0" />
+<<<<<<< HEAD
           <NavigationProperty Name="HoaDon" Relationship="QuanLyCoffeeModel.FK_CTHD_HoaDon" FromRole="CTHD" ToRole="HoaDon" />
           <NavigationProperty Name="ThucUong" Relationship="QuanLyCoffeeModel.FK_CTHD_ThucUong" FromRole="CTHD" ToRole="ThucUong" />
+=======
+          <NavigationProperty Name="HoaDon" Relationship="QuanLyCoffeeModel.FK__CTHD__MaHD__24927208" FromRole="CTHD" ToRole="HoaDon" />
+          <NavigationProperty Name="ThucUong" Relationship="QuanLyCoffeeModel.FK__CTHD__MaThucUong__21B6055D" FromRole="CTHD" ToRole="ThucUong" />
+>>>>>>> e723d41e68fa06675e63c7d63cd30acf63448353
         </EntityType>
         <EntityType Name="HoaDon">
           <Key>
@@ -355,7 +378,11 @@
           <Property Name="TongTriGia" Type="Decimal" Precision="18" Scale="0" />
           <Property Name="MaKH" Type="String" Nullable="false" MaxLength="5" FixedLength="true" Unicode="false" />
           <Property Name="MaNV" Type="String" Nullable="false" MaxLength="5" FixedLength="true" Unicode="false" />
+<<<<<<< HEAD
           <NavigationProperty Name="CTHDs" Relationship="QuanLyCoffeeModel.FK_CTHD_HoaDon" FromRole="HoaDon" ToRole="CTHD" />
+=======
+          <NavigationProperty Name="CTHDs" Relationship="QuanLyCoffeeModel.FK__CTHD__MaHD__24927208" FromRole="HoaDon" ToRole="CTHD" />
+>>>>>>> e723d41e68fa06675e63c7d63cd30acf63448353
           <NavigationProperty Name="KhachHang" Relationship="QuanLyCoffeeModel.FK__HoaDon__MaKH__239E4DCF" FromRole="HoaDon" ToRole="KhachHang" />
           <NavigationProperty Name="NhanVien" Relationship="QuanLyCoffeeModel.FK__HoaDon__MaNV__25869641" FromRole="HoaDon" ToRole="NhanVien" />
         </EntityType>
@@ -367,10 +394,16 @@
           <Property Name="TenKH" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
           <Property Name="DiaChi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="Sdt" Type="String" MaxLength="13" FixedLength="true" Unicode="false" />
+<<<<<<< HEAD
           <Property Name="GioiTinh" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
           <Property Name="MaLoaiKH" Type="String" Nullable="false" MaxLength="5" FixedLength="true" Unicode="false" />
           <NavigationProperty Name="HoaDons" Relationship="QuanLyCoffeeModel.FK__HoaDon__MaKH__239E4DCF" FromRole="KhachHang" ToRole="HoaDon" />
           <NavigationProperty Name="LoaiKhachHang" Relationship="QuanLyCoffeeModel.FK__KhachHang__MaLoa__276EDEB3" FromRole="KhachHang" ToRole="LoaiKhachHang" />
+=======
+          <Property Name="MaLoaiKH" Type="String" Nullable="false" MaxLength="5" FixedLength="true" Unicode="false" />
+          <NavigationProperty Name="HoaDons" Relationship="QuanLyCoffeeModel.FK__HoaDon__MaKH__239E4DCF" FromRole="KhachHang" ToRole="HoaDon" />
+          <NavigationProperty Name="LoaiKhachKhang" Relationship="QuanLyCoffeeModel.FK__KhachHang__MaLoa__276EDEB3" FromRole="KhachHang" ToRole="LoaiKhachKhang" />
+>>>>>>> e723d41e68fa06675e63c7d63cd30acf63448353
         </EntityType>
         <EntityType Name="LoaiKhachHang">
           <Key>
@@ -379,6 +412,7 @@
           <Property Name="MaLoaiKH" Type="String" Nullable="false" MaxLength="5" FixedLength="true" Unicode="false" />
           <Property Name="TenLoaiKH" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
           <Property Name="GhiChu" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+<<<<<<< HEAD
           <NavigationProperty Name="KhachHangs" Relationship="QuanLyCoffeeModel.FK__KhachHang__MaLoa__276EDEB3" FromRole="LoaiKhachHang" ToRole="KhachHang" />
         </EntityType>
         <EntityType Name="LoaiNhanVien">
@@ -389,6 +423,9 @@
           <Property Name="TenLoaiNV" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
           <Property Name="GhiChu" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="NhanViens" Relationship="QuanLyCoffeeModel.FK_NhanVien_LoaiNhanVien" FromRole="LoaiNhanVien" ToRole="NhanVien" />
+=======
+          <NavigationProperty Name="KhachHangs" Relationship="QuanLyCoffeeModel.FK__KhachHang__MaLoa__276EDEB3" FromRole="LoaiKhachKhang" ToRole="KhachHang" />
+>>>>>>> e723d41e68fa06675e63c7d63cd30acf63448353
         </EntityType>
         <EntityType Name="LoaiThucUong">
           <Key>
@@ -419,10 +456,14 @@
           <Property Name="TenNV" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
           <Property Name="DiaChi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="Sdt" Type="String" MaxLength="13" FixedLength="true" Unicode="false" />
+<<<<<<< HEAD
           <Property Name="GioiTinh" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
           <Property Name="MaLoaiNV" Type="String" Nullable="false" MaxLength="2" FixedLength="true" Unicode="false" />
           <NavigationProperty Name="HoaDons" Relationship="QuanLyCoffeeModel.FK__HoaDon__MaNV__25869641" FromRole="NhanVien" ToRole="HoaDon" />
           <NavigationProperty Name="LoaiNhanVien" Relationship="QuanLyCoffeeModel.FK_NhanVien_LoaiNhanVien" FromRole="NhanVien" ToRole="LoaiNhanVien" />
+=======
+          <NavigationProperty Name="HoaDons" Relationship="QuanLyCoffeeModel.FK__HoaDon__MaNV__25869641" FromRole="NhanVien" ToRole="HoaDon" />
+>>>>>>> e723d41e68fa06675e63c7d63cd30acf63448353
         </EntityType>
         <EntityType Name="sysdiagram">
           <Key>
@@ -443,7 +484,11 @@
           <Property Name="Gia" Type="Decimal" Precision="18" Scale="0" />
           <Property Name="AnhMinhHoa" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
           <Property Name="MaLoai" Type="String" Nullable="false" MaxLength="5" FixedLength="true" Unicode="false" />
+<<<<<<< HEAD
           <NavigationProperty Name="CTHDs" Relationship="QuanLyCoffeeModel.FK_CTHD_ThucUong" FromRole="ThucUong" ToRole="CTHD" />
+=======
+          <NavigationProperty Name="CTHDs" Relationship="QuanLyCoffeeModel.FK__CTHD__MaThucUong__21B6055D" FromRole="ThucUong" ToRole="CTHD" />
+>>>>>>> e723d41e68fa06675e63c7d63cd30acf63448353
           <NavigationProperty Name="LoaiThucUong" Relationship="QuanLyCoffeeModel.FK__ThucUong__MaLoai__267ABA7A" FromRole="ThucUong" ToRole="LoaiThucUong" />
           <NavigationProperty Name="ThucUong_NguyenLieu" Relationship="QuanLyCoffeeModel.FK__ThucUong___MaThu__22AA2996" FromRole="ThucUong" ToRole="ThucUong_NguyenLieu" />
         </EntityType>
@@ -467,7 +512,11 @@
           <Property Name="AccountName" Type="String" MaxLength="20" FixedLength="true" Unicode="false" />
           <Property Name="Password" Type="String" MaxLength="20" FixedLength="true" Unicode="false" />
         </EntityType>
+<<<<<<< HEAD
         <Association Name="FK_CTHD_HoaDon">
+=======
+        <Association Name="FK__CTHD__MaHD__24927208">
+>>>>>>> e723d41e68fa06675e63c7d63cd30acf63448353
           <End Type="QuanLyCoffeeModel.HoaDon" Role="HoaDon" Multiplicity="1" />
           <End Type="QuanLyCoffeeModel.CTHD" Role="CTHD" Multiplicity="*" />
           <ReferentialConstraint>
@@ -479,7 +528,11 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+<<<<<<< HEAD
         <Association Name="FK_CTHD_ThucUong">
+=======
+        <Association Name="FK__CTHD__MaThucUong__21B6055D">
+>>>>>>> e723d41e68fa06675e63c7d63cd30acf63448353
           <End Type="QuanLyCoffeeModel.ThucUong" Role="ThucUong" Multiplicity="1" />
           <End Type="QuanLyCoffeeModel.CTHD" Role="CTHD" Multiplicity="*" />
           <ReferentialConstraint>
@@ -516,7 +569,11 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK__KhachHang__MaLoa__276EDEB3">
+<<<<<<< HEAD
           <End Type="QuanLyCoffeeModel.LoaiKhachHang" Role="LoaiKhachHang" Multiplicity="1" />
+=======
+          <End Type="QuanLyCoffeeModel.LoaiKhachKhang" Role="LoaiKhachKhang" Multiplicity="1" />
+>>>>>>> e723d41e68fa06675e63c7d63cd30acf63448353
           <End Type="QuanLyCoffeeModel.KhachHang" Role="KhachHang" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="LoaiKhachHang">
@@ -562,6 +619,7 @@
               <PropertyRef Name="MaNguyenLieu" />
             </Dependent>
           </ReferentialConstraint>
+<<<<<<< HEAD
         </Association>
         <Association Name="FK__ThucUong___MaThu__22AA2996">
           <End Type="QuanLyCoffeeModel.ThucUong" Role="ThucUong" Multiplicity="1" />
@@ -576,6 +634,22 @@
           </ReferentialConstraint>
         </Association>
         </Schema>
+=======
+        </Association>
+        <Association Name="FK__ThucUong___MaThu__22AA2996">
+          <End Type="QuanLyCoffeeModel.ThucUong" Role="ThucUong" Multiplicity="1" />
+          <End Type="QuanLyCoffeeModel.ThucUong_NguyenLieu" Role="ThucUong_NguyenLieu" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ThucUong">
+              <PropertyRef Name="MaThucUong" />
+            </Principal>
+            <Dependent Role="ThucUong_NguyenLieu">
+              <PropertyRef Name="MaThucUong" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+>>>>>>> e723d41e68fa06675e63c7d63cd30acf63448353
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
@@ -607,7 +681,10 @@
             <EntityTypeMapping TypeName="QuanLyCoffeeModel.KhachHang">
               <MappingFragment StoreEntitySet="KhachHang">
                 <ScalarProperty Name="MaLoaiKH" ColumnName="MaLoaiKH" />
+<<<<<<< HEAD
                 <ScalarProperty Name="GioiTinh" ColumnName="GioiTinh" />
+=======
+>>>>>>> e723d41e68fa06675e63c7d63cd30acf63448353
                 <ScalarProperty Name="Sdt" ColumnName="Sdt" />
                 <ScalarProperty Name="DiaChi" ColumnName="DiaChi" />
                 <ScalarProperty Name="TenKH" ColumnName="TenKH" />
@@ -621,6 +698,7 @@
                 <ScalarProperty Name="GhiChu" ColumnName="GhiChu" />
                 <ScalarProperty Name="TenLoaiKH" ColumnName="TenLoaiKH" />
                 <ScalarProperty Name="MaLoaiKH" ColumnName="MaLoaiKH" />
+<<<<<<< HEAD
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -630,6 +708,8 @@
                 <ScalarProperty Name="GhiChu" ColumnName="GhiChu" />
                 <ScalarProperty Name="TenLoaiNV" ColumnName="TenLoaiNV" />
                 <ScalarProperty Name="MaLoaiNV" ColumnName="MaLoaiNV" />
+=======
+>>>>>>> e723d41e68fa06675e63c7d63cd30acf63448353
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -657,8 +737,11 @@
           <EntitySetMapping Name="NhanViens">
             <EntityTypeMapping TypeName="QuanLyCoffeeModel.NhanVien">
               <MappingFragment StoreEntitySet="NhanVien">
+<<<<<<< HEAD
                 <ScalarProperty Name="MaLoaiNV" ColumnName="MaLoaiNV" />
                 <ScalarProperty Name="GioiTinh" ColumnName="GioiTinh" />
+=======
+>>>>>>> e723d41e68fa06675e63c7d63cd30acf63448353
                 <ScalarProperty Name="Sdt" ColumnName="Sdt" />
                 <ScalarProperty Name="DiaChi" ColumnName="DiaChi" />
                 <ScalarProperty Name="TenNV" ColumnName="TenNV" />

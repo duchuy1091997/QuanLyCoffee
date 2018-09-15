@@ -5,6 +5,7 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="cee51099bfdb45ceaf91d1bb8ef6bd96" Name="Diagram1">
+<<<<<<< HEAD
         <EntityTypeShape EntityType="QuanLyCoffeeModel.CTHD" Width="1.5" PointX="5.25" PointY="0.75" />
         <EntityTypeShape EntityType="QuanLyCoffeeModel.HoaDon" Width="1.5" PointX="3" PointY="8.875" />
         <EntityTypeShape EntityType="QuanLyCoffeeModel.KhachHang" Width="1.5" PointX="0.75" PointY="7.25" />
@@ -23,6 +24,24 @@
         <AssociationConnector Association="QuanLyCoffeeModel.FK__HoaDon__MaNV__25869641" />
         <AssociationConnector Association="QuanLyCoffeeModel.FK__KhachHang__MaLoa__276EDEB3" />
         <AssociationConnector Association="QuanLyCoffeeModel.FK_NhanVien_LoaiNhanVien" />
+=======
+        <EntityTypeShape EntityType="QuanLyCoffeeModel.CTHD" Width="1.5" PointX="5.25" PointY="3.625" />
+        <EntityTypeShape EntityType="QuanLyCoffeeModel.HoaDon" Width="1.5" PointX="3" PointY="12.5" />
+        <EntityTypeShape EntityType="QuanLyCoffeeModel.KhachHang" Width="1.5" PointX="0.75" PointY="11.25" />
+        <EntityTypeShape EntityType="QuanLyCoffeeModel.LoaiKhachKhang" Width="1.5" PointX="1.5" PointY="16.625" />
+        <EntityTypeShape EntityType="QuanLyCoffeeModel.LoaiThucUong" Width="1.5" PointX="0.75" PointY="4" />
+        <EntityTypeShape EntityType="QuanLyCoffeeModel.NguyenLieu" Width="1.5" PointX="3" PointY="7.125" />
+        <EntityTypeShape EntityType="QuanLyCoffeeModel.NhanVien" Width="1.5" PointX="0.75" PointY="19.375" />
+        <EntityTypeShape EntityType="QuanLyCoffeeModel.sysdiagram" Width="1.5" PointX="5.75" PointY="6.875" />
+        <EntityTypeShape EntityType="QuanLyCoffeeModel.ThucUong" Width="1.5" PointX="3" PointY="3.5" />
+        <EntityTypeShape EntityType="QuanLyCoffeeModel.ThucUong_NguyenLieu" Width="1.5" PointX="5.25" PointY="0.75" />
+        <EntityTypeShape EntityType="QuanLyCoffeeModel.User" Width="1.5" PointX="7.75" PointY="1.875" />
+        <AssociationConnector Association="QuanLyCoffeeModel.FK__CTHD__MaHD__24927208" />
+        <AssociationConnector Association="QuanLyCoffeeModel.FK__CTHD__MaThucUong__21B6055D" />
+        <AssociationConnector Association="QuanLyCoffeeModel.FK__HoaDon__MaKH__239E4DCF" />
+        <AssociationConnector Association="QuanLyCoffeeModel.FK__HoaDon__MaNV__25869641" />
+        <AssociationConnector Association="QuanLyCoffeeModel.FK__KhachHang__MaLoa__276EDEB3" />
+>>>>>>> e723d41e68fa06675e63c7d63cd30acf63448353
         <AssociationConnector Association="QuanLyCoffeeModel.FK__ThucUong__MaLoai__267ABA7A" />
         <AssociationConnector Association="QuanLyCoffeeModel.FK__ThucUong___MaNgu__286302EC" />
         <AssociationConnector Association="QuanLyCoffeeModel.FK__ThucUong___MaThu__22AA2996" />

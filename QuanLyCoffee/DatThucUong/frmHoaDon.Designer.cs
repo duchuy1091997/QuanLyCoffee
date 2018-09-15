@@ -35,7 +35,11 @@
             this.gcHoaDon = new DevExpress.XtraGrid.GridControl();
             this.gvHoaDon = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
+<<<<<<< HEAD
             this.txtTongTien = new DevExpress.XtraEditors.TextEdit();
+=======
+            this.txtThanhTien = new DevExpress.XtraEditors.TextEdit();
+>>>>>>> e723d41e68fa06675e63c7d63cd30acf63448353
             this.btnXuatHD = new DevExpress.XtraEditors.SimpleButton();
             this.btnHuy = new DevExpress.XtraEditors.SimpleButton();
             this.txtMaHD = new DevExpress.XtraEditors.TextEdit();
@@ -116,11 +120,19 @@
             // 
             // btnXuatHD
             // 
+<<<<<<< HEAD
             this.btnXuatHD.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnXuatHD.ImageOptions.Image")));
             this.btnXuatHD.Location = new System.Drawing.Point(175, 421);
             this.btnXuatHD.Name = "btnXuatHD";
             this.btnXuatHD.Size = new System.Drawing.Size(106, 23);
             this.btnXuatHD.TabIndex = 4;
+=======
+            this.btnXuatHD.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
+            this.btnXuatHD.Location = new System.Drawing.Point(175, 421);
+            this.btnXuatHD.Name = "btnXuatHD";
+            this.btnXuatHD.Size = new System.Drawing.Size(106, 23);
+            this.btnXuatHD.TabIndex = 3;
+>>>>>>> e723d41e68fa06675e63c7d63cd30acf63448353
             this.btnXuatHD.Text = "Xuất hóa đơn";
             this.btnXuatHD.Click += new System.EventHandler(this.btnXuatHD_Click);
             // 
@@ -200,7 +212,11 @@
             this.Controls.Add(this.txtMaHD);
             this.Controls.Add(this.btnHuy);
             this.Controls.Add(this.btnXuatHD);
+<<<<<<< HEAD
             this.Controls.Add(this.txtTongTien);
+=======
+            this.Controls.Add(this.txtThanhTien);
+>>>>>>> e723d41e68fa06675e63c7d63cd30acf63448353
             this.Controls.Add(this.gcHoaDon);
             this.Controls.Add(this.labelControl6);
             this.Controls.Add(this.labelControl7);
@@ -234,7 +250,11 @@
         public DevExpress.XtraGrid.GridControl gcHoaDon;
         public DevExpress.XtraGrid.Views.Grid.GridView gvHoaDon;
         private DevExpress.XtraEditors.LabelControl labelControl6;
+<<<<<<< HEAD
         private DevExpress.XtraEditors.TextEdit txtTongTien;
+=======
+        private DevExpress.XtraEditors.TextEdit txtThanhTien;
+>>>>>>> e723d41e68fa06675e63c7d63cd30acf63448353
         private DevExpress.XtraEditors.SimpleButton btnXuatHD;
         private DevExpress.XtraEditors.SimpleButton btnHuy;
         private DevExpress.XtraEditors.TextEdit txtMaHD;

@@ -40,12 +40,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD
     <Compile Include="BaoCao_BUL.cs" />
     <Compile Include="CTHD_BUL.cs" />
     <Compile Include="HoaDon_BUL.cs" />
     <Compile Include="KhachHang_BUL.cs" />
     <Compile Include="LoaiKhachHang_BUL.cs" />
     <Compile Include="LoaiNhanVien_BUL.cs" />
+=======
+    <Compile Include="CTHD_BUL.cs" />
+    <Compile Include="HoaDon_BUL.cs" />
+>>>>>>> e723d41e68fa06675e63c7d63cd30acf63448353
     <Compile Include="LoaiThucUong_BUL.cs" />
     <Compile Include="NguyenLieu_BUL.cs" />
     <Compile Include="NhanVien_BUL.cs" />
